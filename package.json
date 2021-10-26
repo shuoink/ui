@@ -80,7 +80,9 @@
     }
   },
   "eslintIgnore": [
-    "coverage"
+    "coverage",
+    "node_modules",
+    "dist"
   ],
   "babel": {
     "presets": [
