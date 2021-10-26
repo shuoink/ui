@@ -1,6 +1,6 @@
 /* eslint-disable unicorn/prefer-module */
 module.exports = {
-  purge: ['src/**.*.ts'],
+  purge: ['src/**/*.{js,jsx,ts,tsx}'],
   mode: 'JIT',
   darkMode: 'media',
   theme: {
