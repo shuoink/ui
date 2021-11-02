@@ -1,6 +1,6 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
-npm run build
-npm run lint
-npm run test
+npm run --if-present build
+npm run --if-present lint
+npm run --if-present test

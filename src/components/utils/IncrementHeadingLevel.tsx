@@ -1,9 +1,9 @@
 import type {FC} from 'react';
 import {useContext} from 'react';
 import type {HeadingLevel} from '../../contexts/HeadingLevelContext';
-import HeadingLevelContext from '../../contexts/HeadingLevelContext';
+import {HeadingLevelContext} from '../../contexts/HeadingLevelContext';
 
-const IncrementHeadingLevel: FC<{level?: HeadingLevel}> = ({
+export const IncrementHeadingLevel: FC<{level?: HeadingLevel}> = ({
   level: levelProperty,
   children,
 }) => {
@@ -18,5 +18,3 @@ const IncrementHeadingLevel: FC<{level?: HeadingLevel}> = ({
     </HeadingLevelContext.Provider>
   );
 };
-
-export default IncrementHeadingLevel;

@@ -2,9 +2,9 @@ import classNames from 'classnames';
 import type {FC} from 'react';
 import {useContext} from 'react';
 import type {HeadingLevel} from '../../contexts/HeadingLevelContext';
-import HeadingLevelContext from '../../contexts/HeadingLevelContext';
+import {HeadingLevelContext} from '../../contexts/HeadingLevelContext';
 
-const Heading: FC<
+export const Heading: FC<
   JSX.IntrinsicElements['h1'] & {
     level?: HeadingLevel;
   }
@@ -15,7 +15,7 @@ const Heading: FC<
 
   const className =
     rest.className ??
-    classNames('text-headings', {
+    classNames('text-headings dark:text-headings-dark', {
       'text-6xl': level === 1,
       'text-5xl': level === 2,
       'text-4xl': level === 3,
@@ -30,5 +30,3 @@ const Heading: FC<
     </Tag>
   );
 };
-
-export default Heading;

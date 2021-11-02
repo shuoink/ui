@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@tailwind screens;
+
+@layer components {
+  .cells-px-4 {
+    & > thead,
+    & > tbody,
+    & > tfoot {
+      & > tr > th,
+      & > tr > td {
+        @apply px-4;
+      }
+    }
+  }
+
+  .cells-py-2 {
+    & > thead,
+    & > tbody,
+    & > tfoot {
+      & > tr > th,
+      & > tr > td {
+        @apply px-2;
+      }
+    }
+  }
+}
