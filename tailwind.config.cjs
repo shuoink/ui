@@ -6,6 +6,9 @@ module.exports = {
   darkMode: 'class',
   theme: {
     extend: {
+      minHeight: {
+        9: '2.25rem',
+      },
       colors: {
         primary: colors.orange,
         links: {

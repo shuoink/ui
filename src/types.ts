@@ -1,4 +1,4 @@
-import type {VFC} from 'react';
+import type {FC, VFC} from 'react';
 
 export type DemoMeta = {
   title: string;
@@ -9,3 +9,7 @@ export type DemoModule = {
 } & {
   default: DemoMeta;
 };
+
+export type Unstyled<ELEMENT_TYPE extends keyof JSX.IntrinsicElements> = FC<
+  Omit<JSX.IntrinsicElements[ELEMENT_TYPE], 'className' | 'style'>
+>;

@@ -1,73 +1,81 @@
 import classNames from 'classnames';
 import {forwardRef} from 'react';
-import {useId} from '@reach/auto-id';
 
-type Properties = JSX.IntrinsicElements['input'];
+type Props = JSX.IntrinsicElements['input'] & {
+  vertical?: boolean;
+  inline?: boolean;
+  valid?: boolean;
+};
 
-// TODO:
-// state: indeterminate
-// orientation: vertical
-// readonly
-// -webkit-tap-highlight-color: transparent;
-// thin (skinny track)
-// valid/invalid states
-// any special treatment needed for LTR languages?
-// test with screen reader
-// prefers-reduced-motion
-// draggable
-//   touch-action: pan-y
-
-export const Switch = forwardRef<HTMLInputElement, Properties>((props, ref) => {
-  const autoId = useId();
-  const id = props.id ?? autoId;
-  return (
-    <label
+export const Switch = forwardRef<HTMLInputElement, Props>(
+  ({vertical, inline, valid, ...rest}, ref) => (
+    <div
       className={classNames(
-        'inline-block',
-        'relative isolate',
-        'cursor-pointer',
-        'rounded-full',
-        'focus:outline-none focus:ring',
-        'select-none',
-        'border',
-        'w-8 h-4',
-        'p-[1px]',
-        'box-content',
         {
-          'cursor-pointer': !props.disabled,
-          'cursor-not-allowed': props.disabled,
-          'bg-gray-100 dark:bg-gray-900 border-gray-400 dark:border-gray-600':
-            !props.checked,
-          'bg-primary-500 dark:bg-primary-900 border-primary-400 dark:border-primary-700':
-            props.checked,
-          'opacity-50': props.disabled,
+          'flex': !inline,
+          'inline-flex': inline,
+          'min-h-9': vertical,
+          'align-text-bottom': vertical,
         },
-        'duration-75',
-        'shadow',
+        'flex justify-between items-center gap-2',
+        'select-none',
       )}
-      htmlFor={id}
-      tabIndex={props.disabled ? undefined : 0}
     >
-      <input {...props} id={id} ref={ref} type="checkbox" className="hidden" />
-
-      <div
+      <input
+        {...rest}
+        ref={ref}
+        type="checkbox"
         className={classNames(
-          'h-4 w-4',
-          'border rounded-full',
-          'duration-200 ease-in-out',
-          'transform',
+          'appearance-none p-px grid items-center grid-cols-2 focus:outline-none focus:ring box-content rounded-full w-8 h-4 border-2',
           {
-            'bg-gray-400 dark:bg-gray-600 border-gray-200 dark:border-gray-800':
-              !props.checked,
-            'bg-primary-200 dark:bg-primary-700 border-primary-300 dark:border-primary-800':
-              props.checked,
-            'translate-x-4': props.checked,
+            '-rotate-90': vertical,
+            'cursor-pointer': !rest.disabled && !rest.readOnly,
+            'cursor-not-allowed':
+              Boolean(rest.disabled) || Boolean(rest.readOnly),
+            'bg-gray-200 dark:bg-gray-900 border-gray-400 dark:border-gray-600':
+              !rest.checked,
+            'bg-primary-200 dark:bg-primary-900 border-primary-400 dark:border-primary-600':
+              rest.checked && valid == null,
+            'bg-green-200 dark:bg-green-900 border-green-600 dark:border-green-600':
+              rest.checked && valid === true,
+            'bg-red-200 dark:bg-red-900 border-red-600 dark:border-red-600':
+              rest.checked && valid === false,
+            'opacity-50': rest.disabled,
           },
-          'shadow',
+          'before:w-4 before:h-4 before:rounded-full motion-safe:before:duration-200',
+          {
+            'before:bg-gray-400 dark:before:bg-gray-600 before:border-gray-200 dark:before:border-gray-800':
+              !rest.checked,
+            'before:bg-primary-400 dark:before:bg-primary-600 before:border-primary-200 dark:before:border-primary-800':
+              rest.checked,
+            'before:bg-green-600 dark:before:bg-green-600 before:border-green-200 dark:before:border-green-800':
+              rest.checked && valid === true,
+            'before:bg-red-600 dark:before:bg-red-600 before:border-red-200 dark:before:border-red-800':
+              rest.checked && valid === false,
+            'before:translate-x-4': rest.checked,
+            'before:translate-x-2': rest.checked == null,
+          },
         )}
+        onChange={rest.readOnly ? e => e.preventDefault() : rest.onChange}
       />
-    </label>
-  );
-});
+    </div>
+  ),
+);
+/* <div
+  className={classNames(
+    'h-4 w-4',
+    'border rounded-full',
+    'duration-200 ease-in-out',
+    'transform',
+    {
+      'bg-gray-400 dark:bg-gray-600 border-gray-200 dark:border-gray-800':
+        !props.checked,
+      'bg-primary-200 dark:bg-primary-700 border-primary-300 dark:border-primary-800':
+        props.checked,
+      'translate-x-4': props.checked,
+    },
+    'shadow',
+  )}
+/> */
 
 Switch.displayName = 'Switch';
