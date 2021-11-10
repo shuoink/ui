@@ -118,7 +118,7 @@ const TextMessages: VFC<{
   );
 };
 
-const TextConversations: VFC<{
+export const TextConversations: VFC<{
   messages: Array<Array<MessageDescriptor>>;
   height: string;
 }> = ({height, messages}) => {
