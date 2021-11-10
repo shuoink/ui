@@ -1,8 +1,8 @@
 import type {FC} from 'react';
 import classNames from 'classnames';
-import {IncrementHeadingLevel} from '../..';
+import {IncrementHeadingLevel} from '../utils/IncrementHeadingLevel';
 
-const Card: FC<{
+export const Card: FC<{
   grow?: boolean;
 }> = ({grow, children}) => {
   return (
@@ -18,5 +18,3 @@ const Card: FC<{
     </IncrementHeadingLevel>
   );
 };
-
-export default Card;

@@ -10,7 +10,7 @@ type State = {
   error: Error | null;
 };
 
-class ErrorBoundary extends Component<Props, State> {
+export class ErrorBoundary extends Component<Props, State> {
   state: State = {error: null};
 
   static getDerivedStateFromError(error: Error): Partial<State> {
@@ -33,5 +33,3 @@ class ErrorBoundary extends Component<Props, State> {
     );
   }
 }
-
-export default ErrorBoundary;

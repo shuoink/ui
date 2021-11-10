@@ -1,6 +1,6 @@
 import type {FC, ReactNode} from 'react';
 import classnames from 'classnames';
-import Overlay from './Overlay';
+import {Overlay} from './Overlay';
 
 type Props = {
   isOpen: boolean;

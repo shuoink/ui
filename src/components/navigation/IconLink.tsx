@@ -1,7 +1,7 @@
 import type {ReactNode} from 'react';
 import {forwardRef} from 'react';
 
-const IconLink = forwardRef<
+export const IconLink = forwardRef<
   HTMLAnchorElement,
   {children?: ReactNode; href?: string; ariaLabel: string; title?: string}
 >(({href, ariaLabel, title, children}, reference) => (
@@ -17,5 +17,3 @@ const IconLink = forwardRef<
 ));
 
 IconLink.displayName = 'IconLink';
-
-export default IconLink;

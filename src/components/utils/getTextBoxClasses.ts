@@ -1,7 +1,7 @@
 import classNames from 'classnames';
 import type {DockConfig} from '../../types';
-import getDockClasses from './getDockClasses';
-import getValidityClasses from './getValidityClasses';
+import {getDockClasses} from './getDockClasses';
+import {getValidityClasses} from './getValidityClasses';
 
 export const getTextBoxClasses = ({
   dock,

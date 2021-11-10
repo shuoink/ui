@@ -1,7 +1,7 @@
 import type {FC} from 'react';
 import React, {Children} from 'react';
 
-const Masonry: FC = ({children}) => {
+export const Masonry: FC = ({children}) => {
   const tiles = Children.toArray(children);
   const columns = 5;
   return (
@@ -16,5 +16,3 @@ const Masonry: FC = ({children}) => {
     </div>
   );
 };
-
-export default Masonry;

@@ -1,11 +1,9 @@
 import classnames from 'classnames';
 import type {FieldMeta} from '../..';
-import getDockClasses from './getDockClasses';
-import getValidityClasses from './getValidityClasses';
+import {getDockClasses} from './getDockClasses';
+import {getValidityClasses} from './getValidityClasses';
 
-// TODO: when checked, we need to add a circle to the radio button.
-
-const getFieldClasses = ({
+export const getFieldClasses = ({
   touched = false,
   valid = null,
   dock = {},
@@ -33,5 +31,3 @@ const getFieldClasses = ({
       'checked:before:bg-current': isRadio,
     },
   );
-
-export default getFieldClasses;

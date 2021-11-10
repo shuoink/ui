@@ -2,11 +2,11 @@ import classNames from 'classnames';
 import type {VFC} from 'react';
 import {useLayoutEffect, useState} from 'react';
 
-const Overlay: VFC<{dark?: boolean; opaque?: boolean; close: () => void}> = ({
-  dark,
-  opaque,
-  close,
-}) => {
+export const Overlay: VFC<{
+  dark?: boolean;
+  opaque?: boolean;
+  close: () => void;
+}> = ({dark, opaque, close}) => {
   const [visible, setVisible] = useState(false);
 
   useLayoutEffect(() => {
@@ -31,5 +31,3 @@ const Overlay: VFC<{dark?: boolean; opaque?: boolean; close: () => void}> = ({
     />
   );
 };
-
-export default Overlay;

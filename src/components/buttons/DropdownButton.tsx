@@ -1,5 +1,5 @@
 import type {ComponentProps, FC, ReactNode} from 'react';
-import ExitContext from '../../contexts/ExitContext';
+import {ExitContext} from '../../contexts/ExitContext';
 import {useToggle} from '../../hooks/useToggle';
 import {CollapsibleIcon} from '../icons/CollapsibleIcon';
 import {Dropdown} from '../overlays/Dropdown';

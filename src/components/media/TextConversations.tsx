@@ -1,7 +1,7 @@
 import classNames from 'classnames';
 import type {FC, VFC} from 'react';
 import {useCallback, useLayoutEffect, useRef, useEffect, useState} from 'react';
-import Animate from '../utils/Animate';
+import {Animate} from '../utils/Animate';
 
 export type MessageDescriptor = {
   id: number | string;
@@ -9,7 +9,7 @@ export type MessageDescriptor = {
   text: string;
 };
 
-const Tail: VFC<JSX.IntrinsicElements['svg']> = props => (
+export const Tail: VFC<JSX.IntrinsicElements['svg']> = props => (
   <svg {...props} width="16px" height="16px" viewBox="0 0 3.6563103 2.9231234">
     <g transform="translate(-147.8887,-89.681437)">
       <path
@@ -137,5 +137,3 @@ const TextConversations: VFC<{
     />
   );
 };
-
-export default TextConversations;

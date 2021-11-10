@@ -1,7 +1,7 @@
 import classnames from 'classnames';
 import type {DockConfig} from '../..';
 
-const getDockClasses = ({
+export const getDockClasses = ({
   top,
   right,
   bottom,
@@ -19,5 +19,3 @@ const getDockClasses = ({
     'rounded-b-none': bottom,
     'rounded-l-none': left,
   });
-
-export default getDockClasses;

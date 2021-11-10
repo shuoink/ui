@@ -1,7 +1,7 @@
 import type {VFC} from 'react';
 import classnames from 'classnames';
-import getDockClasses from '../utils/getDockClasses';
-import getValidityClasses from '../utils/getValidityClasses';
+import {getDockClasses} from '../utils/getDockClasses';
+import {getValidityClasses} from '../utils/getValidityClasses';
 import type {FieldMeta} from '../..';
 
 export const FieldFeedback: VFC<FieldMeta> = ({

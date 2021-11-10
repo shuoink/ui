@@ -1,6 +1,6 @@
 import type {VFC} from 'react';
 
-const LogoCarousel: VFC<{
+export const LogoCarousel: VFC<{
   logos: Array<{href?: string; src: string; alt: string}>;
 }> = ({logos}) => {
   return (
@@ -30,5 +30,3 @@ const LogoCarousel: VFC<{
     </div>
   );
 };
-
-export default LogoCarousel;

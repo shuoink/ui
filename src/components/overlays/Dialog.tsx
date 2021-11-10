@@ -1,9 +1,9 @@
 import type {FC, ReactNode} from 'react';
-import React, {useEffect} from 'react';
+import {useEffect} from 'react';
 import {MdClose} from 'react-icons/md';
-import Overlay from './Overlay';
+import {Overlay} from './Overlay';
 
-const Dialog: FC<{title: ReactNode; close: () => void}> = ({
+export const Dialog: FC<{title: ReactNode; close: () => void}> = ({
   title,
   children,
   close,
@@ -35,5 +35,3 @@ const Dialog: FC<{title: ReactNode; close: () => void}> = ({
     </>
   );
 };
-
-export default Dialog;

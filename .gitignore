@@ -7,3 +7,6 @@ coverage
 __diff_output__
 .env
 *.log
+
+# generated code
+src/index.ts

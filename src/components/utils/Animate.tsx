@@ -14,7 +14,7 @@ import {
 gsap.registerPlugin(scrollTrigger);
 
 /** animates opacity and y-position of children on scroll */
-const Animate: FC<{
+export const Animate: FC<{
   delay?: number;
   from?: gsap.TweenVars;
 }> = ({delay, from: fromProp = {y: 100}, children}) => {
@@ -52,5 +52,3 @@ const Animate: FC<{
 
   return <>{children}</>;
 };
-
-export default Animate;

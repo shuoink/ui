@@ -2,7 +2,7 @@ import type {FC} from 'react';
 import {useRef, useLayoutEffect} from 'react';
 import {gsap} from 'gsap';
 
-const Collapsible: FC<{isOpen?: boolean}> = ({children, isOpen}) => {
+export const Collapsible: FC<{isOpen?: boolean}> = ({children, isOpen}) => {
   const reference = useRef<HTMLDivElement | null>(null);
 
   useLayoutEffect(() => {
@@ -28,5 +28,3 @@ const Collapsible: FC<{isOpen?: boolean}> = ({children, isOpen}) => {
     </div>
   );
 };
-
-export default Collapsible;

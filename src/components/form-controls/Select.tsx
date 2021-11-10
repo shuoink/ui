@@ -1,9 +1,9 @@
 import type {FC} from 'react';
 import {MdExpandMore} from 'react-icons/md';
 import type {FieldMeta, Unstyled} from '../../types';
-import getFieldClasses from '../utils/getFieldClasses';
+import {getFieldClasses} from '../utils/getFieldClasses';
 
-export const Select: FC<Unstyled<'select'> & {meta: FieldMeta}> = ({
+export const Select: FC<Unstyled<'select'> & {meta?: FieldMeta}> = ({
   meta,
   ...props
 }) => (
