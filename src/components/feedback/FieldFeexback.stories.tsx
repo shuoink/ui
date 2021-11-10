@@ -10,7 +10,10 @@ const meta: Meta = {
 
 export const Invalid: VFC = () => (
   <>
-    <Input value="invalid value" meta={{dock: {bottom: true}}} />
+    <Input
+      value="invalid value"
+      meta={{dock: {bottom: true}, touched: true, valid: false}}
+    />
     <FieldFeedbackComponent
       dock={{top: true}}
       displayName="Name"

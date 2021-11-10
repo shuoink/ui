@@ -8,7 +8,9 @@
     "test": "jest",
     "codegen": "node --loader ts-node/esm ./scripts/codegen.ts",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "chromatic": "dotenv npx chromatic",
+    "chromatic:ci": "chromatic --exit-zero-on-changes"
   },
   "engines": {
     "node": ">=16.0.0"
@@ -45,7 +47,9 @@
     "autoprefixer": "^10.3.7",
     "babel-jest": "^27.3.1",
     "babel-loader": "^8.2.3",
+    "chromatic": "^6.0.6",
     "depcheck": "^1.4.2",
+    "dotenv-cli": "^4.1.0",
     "eslint": "^7.32.0",
     "globby": "^11.0.4",
     "husky": "^7.0.4",
