@@ -17,7 +17,7 @@ export const Switch: VFC = () => {
   return (
     <div className="space-y-4">
       <Heading>States</Heading>
-      <table className="cells-px-4 text-left">
+      <table className="cells-px-4 cells-py-2 text-left">
         <thead>
           <tr>
             <td />
@@ -73,27 +73,6 @@ export const Switch: VFC = () => {
             </td>
           </tr>
           <tr>
-            <th scope="row">Indeterminate</th>
-            <td>
-              <SwitchControl onChange={noop} />
-            </td>
-            <td>
-              <SwitchControl readOnly onChange={noop} />
-            </td>
-            <td>
-              <SwitchControl disabled onChange={noop} />
-            </td>
-            <td>
-              <SwitchControl valid onChange={noop} />
-            </td>
-            <td>
-              <SwitchControl valid={false} onChange={noop} />
-            </td>
-            <td>
-              <SwitchControl vertical onChange={noop} />
-            </td>
-          </tr>
-          <tr>
             <th scope="row">Controlled</th>
             <td>
               <SwitchControl checked={checked} onChange={handleChange} />
@@ -134,22 +113,33 @@ export const Switch: VFC = () => {
       </table>
       <Heading>Inline</Heading>
       <p>
-        On: <SwitchControl inline checked onChange={noop} /> Off:{' '}
-        <SwitchControl inline checked={false} onChange={noop} /> Indeterminate:{' '}
-        <SwitchControl inline onChange={noop} /> Controlled:{' '}
-        <SwitchControl inline checked={checked} onChange={handleChange} />
+        <label>
+          On: <SwitchControl inline checked onChange={noop} />
+        </label>{' '}
+        <label>
+          Off: <SwitchControl inline checked={false} onChange={noop} />
+        </label>{' '}
+        <label>
+          Controlled:{' '}
+          <SwitchControl inline checked={checked} onChange={handleChange} />
+        </label>
       </p>
       <p>
-        On: <SwitchControl inline vertical checked onChange={noop} /> Off:{' '}
-        <SwitchControl inline vertical checked={false} onChange={noop} />{' '}
-        Indeterminate: <SwitchControl inline vertical onChange={noop} />{' '}
-        Controlled:{' '}
-        <SwitchControl
-          inline
-          vertical
-          checked={checked}
-          onChange={handleChange}
-        />
+        <label>
+          On: <SwitchControl inline vertical checked onChange={noop} />
+        </label>{' '}
+        <label>
+          Off: <SwitchControl inline vertical checked={false} onChange={noop} />
+        </label>{' '}
+        <label>
+          Controlled:{' '}
+          <SwitchControl
+            inline
+            vertical
+            checked={checked}
+            onChange={handleChange}
+          />
+        </label>
       </p>
     </div>
   );

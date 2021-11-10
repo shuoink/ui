@@ -4,6 +4,7 @@
 @tailwind screens;
 
 @layer components {
+  /* TODO: create a cells: plugin? */
   .cells-px-4 {
     & > thead,
     & > tbody,
@@ -21,7 +22,7 @@
     & > tfoot {
       & > tr > th,
       & > tr > td {
-        @apply px-2;
+        @apply py-2;
       }
     }
   }

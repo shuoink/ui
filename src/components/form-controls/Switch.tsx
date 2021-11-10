@@ -25,6 +25,8 @@ export const Switch = forwardRef<HTMLInputElement, Props>(
         {...rest}
         ref={ref}
         type="checkbox"
+        role="switch"
+        aria-checked={rest.checked}
         className={classNames(
           'appearance-none p-px grid items-center grid-cols-2 focus:outline-none focus:ring box-content rounded-full w-8 h-4 border-2',
           {
@@ -53,7 +55,6 @@ export const Switch = forwardRef<HTMLInputElement, Props>(
             'before:bg-red-600 dark:before:bg-red-600 before:border-red-200 dark:before:border-red-800':
               rest.checked && valid === false,
             'before:translate-x-4': rest.checked,
-            'before:translate-x-2': rest.checked == null,
           },
         )}
         onChange={rest.readOnly ? e => e.preventDefault() : rest.onChange}
@@ -61,21 +62,5 @@ export const Switch = forwardRef<HTMLInputElement, Props>(
     </div>
   ),
 );
-/* <div
-  className={classNames(
-    'h-4 w-4',
-    'border rounded-full',
-    'duration-200 ease-in-out',
-    'transform',
-    {
-      'bg-gray-400 dark:bg-gray-600 border-gray-200 dark:border-gray-800':
-        !props.checked,
-      'bg-primary-200 dark:bg-primary-700 border-primary-300 dark:border-primary-800':
-        props.checked,
-      'translate-x-4': props.checked,
-    },
-    'shadow',
-  )}
-/> */
 
 Switch.displayName = 'Switch';
