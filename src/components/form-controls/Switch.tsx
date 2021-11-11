@@ -38,7 +38,7 @@ export const Switch = forwardRef<HTMLInputElement, Props>(
               !rest.checked,
             'bg-primary-200 dark:bg-primary-900 border-primary-400 dark:border-primary-600':
               rest.checked && valid == null,
-            'bg-green-200 dark:bg-green-900 border-green-600 dark:border-green-600':
+            'bg-emerald-200 dark:bg-emerald-900 border-emerald-600 dark:border-emerald-600':
               rest.checked && valid === true,
             'bg-red-200 dark:bg-red-900 border-red-600 dark:border-red-600':
               rest.checked && valid === false,
@@ -50,7 +50,7 @@ export const Switch = forwardRef<HTMLInputElement, Props>(
               !rest.checked,
             'before:bg-primary-400 dark:before:bg-primary-600 before:border-primary-200 dark:before:border-primary-800':
               rest.checked,
-            'before:bg-green-600 dark:before:bg-green-600 before:border-green-200 dark:before:border-green-800':
+            'before:bg-emerald-600 dark:before:bg-emerald-600 before:border-emerald-200 dark:before:border-emerald-800':
               rest.checked && valid === true,
             'before:bg-red-600 dark:before:bg-red-600 before:border-red-200 dark:before:border-red-800':
               rest.checked && valid === false,

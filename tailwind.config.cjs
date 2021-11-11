@@ -2,7 +2,7 @@ const colors = require('tailwindcss/colors');
 
 module.exports = {
   mode: 'jit',
-  purge: ['./src/**/*.{js,jsx,ts,tsx}', './.storybook/**/*.{js,jsx,ts,tsx}'],
+  content: ['./src/**/*.{js,jsx,ts,tsx}', './.storybook/**/*.{js,jsx,ts,tsx}'],
   darkMode: 'class',
   theme: {
     extend: {
@@ -10,8 +10,6 @@ module.exports = {
         9: '2.25rem',
       },
       colors: {
-        warmGray: colors.warmGray,
-        cyan: colors.cyan,
         primary: colors.orange,
         links: {
           DEFAULT: 'blue',
