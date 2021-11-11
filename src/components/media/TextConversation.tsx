@@ -1,15 +1,14 @@
 import classNames from 'classnames';
 import type {FC, VFC} from 'react';
-import {useCallback, useLayoutEffect, useRef, useEffect, useState} from 'react';
-import {Animate} from '../utils/Animate';
+import {useLayoutEffect, useRef, useEffect, useState} from 'react';
 
-export type MessageDescriptor = {
+export type TextDescriptor = {
   id: number | string;
   from: 'me' | 'them';
   text: string;
 };
 
-export const Tail: VFC<JSX.IntrinsicElements['svg']> = props => (
+const Tail: VFC<JSX.IntrinsicElements['svg']> = props => (
   <svg {...props} width="16px" height="16px" viewBox="0 0 3.6563103 2.9231234">
     <g transform="translate(-147.8887,-89.681437)">
       <path
@@ -30,13 +29,32 @@ export const Tail: VFC<JSX.IntrinsicElements['svg']> = props => (
   </svg>
 );
 
-const Message: FC<{from: 'me' | 'them'}> = ({from, children}) => (
-  <Animate>
+export const TextMessage: FC<{from: 'me' | 'them'}> = ({from, children}) => {
+  const ref = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    const div = ref.current;
+    if (!div) {
+      return;
+    }
+    div.animate(
+      [
+        {opacity: 0, transform: 'translateY(100px)'},
+        {opacity: 1, transform: 'translateY(0)'},
+      ],
+      {iterations: 1, duration: 100, fill: 'forwards'},
+    );
+  }, []);
+
+  return (
     <div
-      className={classNames('relative max-w-[75%]', {
-        'self-end': from === 'me',
-        'selft-start': from === 'them',
-      })}
+      ref={ref}
+      className={classNames(
+        'relative max-w-[75%] opacity-0 translate-y-[100px]',
+        {
+          'self-end': from === 'me',
+          'selft-start': from === 'them',
+        },
+      )}
     >
       <Tail
         className={classNames('absolute bottom-0', {
@@ -58,14 +76,13 @@ const Message: FC<{from: 'me' | 'them'}> = ({from, children}) => (
         {children}
       </p>
     </div>
-  </Animate>
-);
+  );
+};
 
-const TextMessages: VFC<{
-  messages: Array<MessageDescriptor>;
-  height: string;
+export const TextConversation: VFC<{
+  texts: Array<TextDescriptor>;
   onComplete?: () => void;
-}> = ({height, messages, onComplete}) => {
+}> = ({texts: messages, onComplete}) => {
   const ref = useRef<HTMLDivElement | null>(null);
   const [count, setCount] = useState(0);
 
@@ -106,34 +123,13 @@ const TextMessages: VFC<{
   return (
     <div
       ref={ref}
-      className="flex flex-col text-lg mw-[600px] py-4 px-6 gap-4 overflow-hidden"
-      style={{height}}
+      className="flex-1 flex flex-col text-lg mw-[600px] py-4 px-6 gap-4 overflow-hidden"
     >
       {messages.slice(0, count).map(message => (
-        <Message key={message.id} from={message.from}>
+        <TextMessage key={message.id} from={message.from}>
           {message.text}
-        </Message>
+        </TextMessage>
       ))}
     </div>
-  );
-};
-
-export const TextConversations: VFC<{
-  messages: Array<Array<MessageDescriptor>>;
-  height: string;
-}> = ({height, messages}) => {
-  const [index, setIndex] = useState(0);
-
-  const onComplete = useCallback(() => {
-    setIndex(i => (i + 1) % messages.length);
-  }, [messages]);
-
-  return (
-    <TextMessages
-      key={index}
-      messages={messages[index]}
-      height={height}
-      onComplete={onComplete}
-    />
   );
 };

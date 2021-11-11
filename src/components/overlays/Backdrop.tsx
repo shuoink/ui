@@ -2,10 +2,10 @@ import classNames from 'classnames';
 import type {VFC} from 'react';
 import {useLayoutEffect, useState} from 'react';
 
-export const Overlay: VFC<{
+export const Backdrop: VFC<{
   dark?: boolean;
   opaque?: boolean;
-  close: () => void;
+  close?: () => void;
 }> = ({dark, opaque, close}) => {
   const [visible, setVisible] = useState(false);
 
@@ -25,7 +25,7 @@ export const Overlay: VFC<{
       onClick={close}
       onKeyDown={evemt => {
         if (evemt.key === 'Escape') {
-          close();
+          close?.();
         }
       }}
     />

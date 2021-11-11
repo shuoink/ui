@@ -1,8 +1,8 @@
 import type {VFC} from 'react';
 import classnames from 'classnames';
-import {getDockClasses} from '../utils/getDockClasses';
-import {getValidityClasses} from '../utils/getValidityClasses';
-import type {FieldMeta} from '../..';
+import {getDockClasses} from '../../utils/getDockClasses';
+import {getValidityClasses} from '../../utils/getValidityClasses';
+import type {FieldMeta} from '../../types';
 
 export const FieldFeedback: VFC<FieldMeta> = ({
   displayName,
@@ -19,7 +19,7 @@ export const FieldFeedback: VFC<FieldMeta> = ({
   return (
     <div
       className={classnames(
-        'border p-4 text-xl rounded-md',
+        'border p-2 text-xl rounded-md',
         dockClasses,
         validityClasses,
       )}

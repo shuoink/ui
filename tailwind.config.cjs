@@ -10,6 +10,8 @@ module.exports = {
         9: '2.25rem',
       },
       colors: {
+        warmGray: colors.warmGray,
+        cyan: colors.cyan,
         primary: colors.orange,
         links: {
           DEFAULT: 'blue',

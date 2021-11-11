@@ -8,7 +8,7 @@ type ToggleTuple = [
 ];
 
 export const useToggle = (
-  initialValue: boolean | (() => boolean),
+  initialValue: boolean | (() => boolean) = false,
 ): ToggleTuple => {
   const [bool, setBool] = useState(initialValue);
   const setTrue = useCallback(() => setBool(true), []);

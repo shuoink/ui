@@ -1,13 +1,13 @@
 import type {FC, ReactNode} from 'react';
 import {useEffect} from 'react';
 import {MdClose} from 'react-icons/md';
-import {Overlay} from './Overlay';
+import {Backdrop} from './Backdrop';
 
-export const Dialog: FC<{title: ReactNode; close: () => void}> = ({
-  title,
-  children,
-  close,
-}) => {
+export const Dialog: FC<{
+  header?: ReactNode;
+  footer?: ReactNode;
+  close: () => void;
+}> = ({header, footer, children, close}) => {
   useEffect(() => {
     const handleKeyDown = ({key}: KeyboardEvent) => {
       if (key === 'Escape') {
@@ -20,8 +20,11 @@ export const Dialog: FC<{title: ReactNode; close: () => void}> = ({
 
   return (
     <>
-      <Overlay dark close={close} />
-      <dialog open className="w-3/4 shadow-2xl bg-white fixed top-0 mt-24">
+      <Backdrop dark close={close} />
+      <dialog
+        open
+        className="z-20 w-3/4 shadow-2xl bg-white fixed top-1/2 -translate-y-1/2 max-h-[75vh] flex flex-col p-0"
+      >
         <button
           type="button"
           className="text-2xl transform hover:scale-150 absolute top-0 right-0 p-2 duration-200 focus:outline-none"
@@ -29,8 +32,9 @@ export const Dialog: FC<{title: ReactNode; close: () => void}> = ({
         >
           <MdClose />
         </button>
-        <h2 className="text-4xl">{title}</h2>
-        <div className="space-y-4">{children}</div>
+        {header}
+        <div className="flex-1 h-full overflow-auto p-2">{children}</div>
+        {footer}
       </dialog>
     </>
   );

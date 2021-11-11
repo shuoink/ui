@@ -1,6 +1,6 @@
 import type {VFC} from 'react';
-import type {FieldMeta} from '../..';
-import {getFieldClasses} from '../utils/getFieldClasses';
+import type {FieldMeta} from '../../types';
+import {getFieldClasses} from '../../utils/getFieldClasses';
 
 export const Radio: VFC<
   JSX.IntrinsicElements['input'] & {meta?: Omit<FieldMeta, 'dock' | 'isRadio'>}

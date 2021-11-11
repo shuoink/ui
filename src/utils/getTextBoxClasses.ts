@@ -1,5 +1,5 @@
 import classNames from 'classnames';
-import type {DockConfig} from '../../types';
+import type {DockConfig} from '../types';
 import {getDockClasses} from './getDockClasses';
 import {getValidityClasses} from './getValidityClasses';
 

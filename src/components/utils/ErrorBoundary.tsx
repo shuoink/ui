@@ -25,7 +25,7 @@ export class ErrorBoundary extends Component<Props, State> {
 
     return error ? (
       <Alert type="error">
-        Uhoh! Something went wrong!
+        Oh no! Something went wrong!
         {process.env.NODE_ENV === 'development' && <pre>{error.stack}</pre>}
       </Alert>
     ) : (

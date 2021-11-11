@@ -11,7 +11,7 @@ const meta: Meta = {
 
 export const CollapsibleIcon: VFC = () => {
   // eslint-disable-next-line unicorn/no-unreadable-array-destructuring -- boo hiss. disable this rule
-  const [isOpen, , , toggle] = useToggle(false);
+  const [isOpen, , , toggle] = useToggle();
   return (
     <div className="flex flex-wrap gap-2">
       <Button>

@@ -9,7 +9,7 @@ export const Card: FC<{
     <IncrementHeadingLevel>
       <div
         className={classNames(
-          'flex flex-col bg-white rounded-lg transform hover:-translate-y-2 hover:scale-105 shadow-lg duration-75 w-full',
+          'flex flex-col bg-white rounded-lg transform hover:-translate-y-2 hover:scale-105 shadow-lg duration-75 w-full p-2',
           {'flex-grow': grow},
         )}
       >

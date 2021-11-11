@@ -2,7 +2,7 @@ import type {ChangeEvent, VFC} from 'react';
 import {useState} from 'react';
 import type {Meta} from '@storybook/react';
 import {noop} from '../../utils/noop';
-import {Heading} from '../..';
+import {Heading} from '../layout/Heading';
 import {Switch as SwitchControl} from './Switch';
 
 const meta: Meta = {

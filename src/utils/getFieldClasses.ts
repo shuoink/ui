@@ -1,5 +1,5 @@
 import classnames from 'classnames';
-import type {FieldMeta} from '../..';
+import type {FieldMeta} from '../types';
 import {getDockClasses} from './getDockClasses';
 import {getValidityClasses} from './getValidityClasses';
 

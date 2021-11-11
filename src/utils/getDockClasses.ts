@@ -1,5 +1,5 @@
 import classnames from 'classnames';
-import type {DockConfig} from '../..';
+import type {DockConfig} from '../types';
 
 export const getDockClasses = ({
   top,

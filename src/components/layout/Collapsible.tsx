@@ -1,29 +1,26 @@
 import type {FC} from 'react';
 import {useRef, useLayoutEffect} from 'react';
-import {gsap} from 'gsap';
 
 export const Collapsible: FC<{isOpen?: boolean}> = ({children, isOpen}) => {
-  const reference = useRef<HTMLDivElement | null>(null);
+  const ref = useRef<HTMLDivElement | null>(null);
 
   useLayoutEffect(() => {
-    const element = reference.current;
-    if (!element) {
+    const div = ref.current;
+    if (!div) {
       return;
     }
-    gsap.to(element, {
-      height: isOpen ? element.scrollHeight : 0,
-      ease: 'power4.out',
-      onComplete: () => {
-        const element2 = reference.current;
-        if (isOpen && element2) {
-          element2.style.height = 'auto';
-        }
-      },
-    });
+    const height = div.scrollHeight;
+    div.animate(
+      [
+        {height: isOpen ? 0 : `${height}px`},
+        {height: isOpen ? `${height}px` : 0},
+      ],
+      {iterations: 1, duration: 100, fill: 'forwards'},
+    );
   }, [isOpen]);
 
   return (
-    <div ref={reference} className="overflow-hidden">
+    <div ref={ref} className="overflow-hidden h-0">
       {children}
     </div>
   );

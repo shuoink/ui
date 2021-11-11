@@ -16,7 +16,7 @@ export const DropdownButton: FC<Props> = ({
   label,
   ...buttonProps
 }) => {
-  const [isOpen, , close, toggle] = useToggle(false);
+  const [isOpen, , close, toggle] = useToggle();
   return (
     <Dropdown
       isOpen={isOpen}
