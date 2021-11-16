@@ -11,10 +11,15 @@ export type Unstyled<ELEMENT_TYPE extends keyof JSX.IntrinsicElements> = Omit<
 >;
 
 export type DockConfig = {
+  /** appear docked to the element above */
   top?: boolean;
+  /** appear docked to the element below */
   bottom?: boolean;
+  /** appear docked to the element to the left */
   left?: boolean;
+  /** appear docked to the element right */
   right?: boolean;
+  /** don't remove the border when docked */
   preserveBorder?: true;
 };
 
