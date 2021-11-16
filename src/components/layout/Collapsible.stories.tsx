@@ -5,7 +5,7 @@ import {Button} from '../buttons/Button';
 import {Collapsible as Component} from './Collapsible';
 
 const meta: Meta = {
-  title: 'Components/Layout/Collapsible',
+  title: 'Layout/Collapsible',
   component: Component,
 };
 

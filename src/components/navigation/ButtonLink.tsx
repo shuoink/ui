@@ -1,16 +1,12 @@
 import {forwardRef} from 'react';
-import classnames from 'classnames';
-import {BUTTON_CLASSES} from '../../constants';
+import type {DockConfig} from '../../types';
+import {getButtonClasses} from '../../utils/getButtonClasses';
 
 export const ButtonLink = forwardRef<
   HTMLAnchorElement,
-  JSX.IntrinsicElements['a']
->(({className, children, ...rest}, reference) => (
-  <a
-    {...rest}
-    ref={reference}
-    className={classnames(className, BUTTON_CLASSES)}
-  >
+  JSX.IntrinsicElements['a'] & {dock?: DockConfig}
+>(({className, children, dock, ...rest}, ref) => (
+  <a {...rest} ref={ref} className={getButtonClasses({dock})}>
     {children}
   </a>
 ));

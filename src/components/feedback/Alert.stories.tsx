@@ -3,7 +3,7 @@ import type {Meta} from '@storybook/react';
 import {Alert as AlertComponent} from './Alert';
 
 const meta: Meta = {
-  title: 'Components/Feedback/Alert',
+  title: 'Feedback/Alert',
   component: AlertComponent,
 };
 

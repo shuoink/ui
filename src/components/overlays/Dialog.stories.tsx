@@ -5,7 +5,7 @@ import {Heading} from '../layout/Heading';
 import {Dialog as Component} from './Dialog';
 
 const meta: Meta = {
-  title: 'Components/Overlays/Dialog',
+  title: 'Overlays/Dialog',
   component: Component,
 };
 

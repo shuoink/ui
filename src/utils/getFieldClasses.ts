@@ -9,9 +9,10 @@ export const getFieldClasses = ({
   dock = {},
   block = true,
   isRadio = false,
+  isCheckbox = false,
 }: FieldMeta = {}): string =>
   classnames(
-    {'inline-flex items-stretch': isRadio},
+    {'inline-flex items-stretch': isRadio || isCheckbox},
     'bg-white border',
     'focus:outline-none focus:ring-2 focus:ring-offset-1 focus:ring-offset-transparent focus:ring-complementary-300',
     'shadow appearance-none',
@@ -25,9 +26,11 @@ export const getFieldClasses = ({
       'block w-full': block,
       'rounded-full': isRadio,
       'rounded': !isRadio,
+      'cursor-pointer': isRadio || isCheckbox,
     },
     {
-      'before:flex-grow before:w-6 before:h-6 before:rounded-full': isRadio,
-      'checked:before:bg-current': isRadio,
+      'before:flex-grow before:w-6 before:h-6': isRadio || isCheckbox,
+      'before:rounded-full': isRadio,
+      'before:checked:bg-current': isRadio || isCheckbox,
     },
   );

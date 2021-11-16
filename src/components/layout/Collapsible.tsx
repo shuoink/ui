@@ -11,10 +11,7 @@ export const Collapsible: FC<{isOpen?: boolean}> = ({children, isOpen}) => {
     }
     const height = div.scrollHeight;
     div.animate(
-      [
-        {height: isOpen ? 0 : `${height}px`},
-        {height: isOpen ? `${height}px` : 0},
-      ],
+      [{height: div.clientHeight}, {height: isOpen ? `${height}px` : 0}],
       {iterations: 1, duration: 100, fill: 'forwards'},
     );
   }, [isOpen]);

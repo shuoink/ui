@@ -4,7 +4,7 @@ import {MdAdd} from 'react-icons/md';
 import {IconButton as IconButtonComponent} from './IconButton';
 
 const meta: Meta = {
-  title: 'Components/Buttons/IconButton',
+  title: 'Buttons/IconButton',
   component: IconButtonComponent,
 };
 

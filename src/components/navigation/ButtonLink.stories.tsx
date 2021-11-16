@@ -3,7 +3,7 @@ import type {Meta} from '@storybook/react';
 import {ButtonLink as ButtonLinkComponent} from './ButtonLink';
 
 const meta: Meta = {
-  title: 'Components/Navigation/ButtonLink',
+  title: 'Navigation/ButtonLink',
   component: ButtonLinkComponent,
 };
 

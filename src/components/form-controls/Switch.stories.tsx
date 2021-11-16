@@ -6,7 +6,7 @@ import {Heading} from '../layout/Heading';
 import {Switch as SwitchControl} from './Switch';
 
 const meta: Meta = {
-  title: 'Components/Form Controls/Switch',
+  title: 'Forms/Controls/Switch',
   component: SwitchControl,
 };
 
@@ -73,7 +73,7 @@ export const Switch: VFC = () => {
             </td>
           </tr>
           <tr>
-            <th scope="row">Controlled</th>
+            <th scope="row">Interactive</th>
             <td>
               <SwitchControl checked={checked} onChange={handleChange} />
             </td>
@@ -120,7 +120,7 @@ export const Switch: VFC = () => {
           Off: <SwitchControl inline checked={false} onChange={noop} />
         </label>{' '}
         <label>
-          Controlled:{' '}
+          Interactive:{' '}
           <SwitchControl inline checked={checked} onChange={handleChange} />
         </label>
       </p>
@@ -132,7 +132,7 @@ export const Switch: VFC = () => {
           Off: <SwitchControl inline vertical checked={false} onChange={noop} />
         </label>{' '}
         <label>
-          Controlled:{' '}
+          Interactive:{' '}
           <SwitchControl
             inline
             vertical

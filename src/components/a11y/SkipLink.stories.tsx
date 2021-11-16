@@ -3,7 +3,7 @@ import type {Meta} from '@storybook/react';
 import {SkipLink as SkipLinkComponent} from './SkipLink';
 
 const meta: Meta = {
-  title: 'Components/A11y/SkipLink',
+  title: 'A11y/SkipLink',
   component: SkipLinkComponent,
 };
 

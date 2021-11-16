@@ -4,6 +4,7 @@ import classNames from 'classnames';
 
 export const CollapsibleIcon: VFC<{isOpen?: boolean}> = ({isOpen}) => (
   <MdExpandMore
+    title="Expanded/Collapsed Icon"
     className={classNames('ml-2 duration-200 transform', {
       'rotate-180': isOpen,
     })}

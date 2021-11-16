@@ -3,7 +3,7 @@ import type {Meta} from '@storybook/react';
 import {Copyright as Component} from './Copyright';
 
 const meta: Meta = {
-  title: 'Components/Utils/Copyright',
+  title: 'Utils/Copyright',
   component: Component,
 };
 

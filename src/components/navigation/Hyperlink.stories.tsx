@@ -3,7 +3,7 @@ import type {Meta} from '@storybook/react';
 import {Hyperlink as Link} from './Hyperlink';
 
 const meta: Meta = {
-  title: 'Components/Navigation/Hyperlink',
+  title: 'Navigation/Hyperlink',
   component: Link,
 };
 

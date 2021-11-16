@@ -4,7 +4,7 @@ import {MasonryGrid as Component} from './MasonryGrid';
 import {Card} from './Card';
 
 const meta: Meta = {
-  title: 'Components/Layout/Masonry Grid',
+  title: 'Layout/Masonry Grid',
   component: Component,
 };
 

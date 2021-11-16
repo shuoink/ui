@@ -3,7 +3,7 @@ import type {Meta} from '@storybook/react';
 import {ErrorBoundary as Component} from './ErrorBoundary';
 
 const meta: Meta = {
-  title: 'Components/Utils/ErrorBoundary',
+  title: 'Utils/ErrorBoundary',
   component: Component,
 };
 

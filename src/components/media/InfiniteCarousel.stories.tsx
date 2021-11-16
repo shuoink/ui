@@ -4,7 +4,7 @@ import {ShuoinkLogo} from '../images/ShuoinkLogo';
 import {InfiniteCarousel as Component} from './InfiniteCarousel';
 
 const meta: Meta = {
-  title: 'Components/Media/Infinite Carousel',
+  title: 'Media/Infinite Carousel',
   component: Component,
 };
 

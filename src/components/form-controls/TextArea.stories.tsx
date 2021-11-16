@@ -3,7 +3,7 @@ import type {Meta} from '@storybook/react';
 import {TextArea as Component} from './TextArea';
 
 const meta: Meta = {
-  title: 'Components/Form Controls/TextArea',
+  title: 'Forms/Controls/TextArea',
   component: Component,
 };
 

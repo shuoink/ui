@@ -1,11 +1,11 @@
 import type {VFC} from 'react';
 import type {Meta} from '@storybook/react';
-import {Button} from '../buttons/Button';
 import {useToggle} from '../../hooks/useToggle';
+import {Button} from '../buttons/Button';
 import {Backdrop as Component} from './Backdrop';
 
 const meta: Meta = {
-  title: 'Components/Overlays/Backdrop',
+  title: 'Overlays/Backdrop',
   component: Component,
 };
 

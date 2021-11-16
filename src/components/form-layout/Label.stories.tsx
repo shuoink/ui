@@ -3,7 +3,7 @@ import type {Meta} from '@storybook/react';
 import {Label as LabelComponent} from './Label';
 
 const meta: Meta = {
-  title: 'Components/Form Layout/Label',
+  title: 'Forms/Layout/Label',
   component: LabelComponent,
 };
 

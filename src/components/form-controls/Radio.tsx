@@ -8,7 +8,6 @@ export const Radio: VFC<
   <input
     {...rest}
     type="radio"
-    checked={rest.checked ?? false}
     className={getFieldClasses({...meta, block: false, isRadio: true})}
   />
 );

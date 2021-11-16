@@ -1,9 +1,9 @@
 import type {VFC} from 'react';
 import type {Meta} from '@storybook/react';
-import {Input as Component} from './Input';
+import {TextInput as Component} from './TextInput';
 
 const meta: Meta = {
-  title: 'Components/Form Controls/Input',
+  title: 'Forms/Controls/Text Input',
   component: Component,
 };
 

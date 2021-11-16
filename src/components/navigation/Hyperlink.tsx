@@ -1,12 +1,13 @@
 import type {FC} from 'react';
+import {getHyperlinkClasses} from '../../utils/getHyperlinkClasses';
 import {isAbsoluteUrl} from '../../utils/isAbsoluteUrl';
 
 export const Hyperlink: FC<JSX.IntrinsicElements['a']> = ({
   href,
   children,
-  className = 'text-links dark:text-links-dark hover:underline',
   ...rest
 }) => {
+  const className = getHyperlinkClasses();
   if (href && isAbsoluteUrl(href)) {
     return (
       <a

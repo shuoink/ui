@@ -4,7 +4,7 @@ import type {TextDescriptor} from './TextConversation';
 import {TextConversation, TextMessage} from './TextConversation';
 
 const meta: Meta = {
-  title: 'Components/Media/TextConversation',
+  title: 'Media/TextConversation',
   component: TextConversation,
 };
 

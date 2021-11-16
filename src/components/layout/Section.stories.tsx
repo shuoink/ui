@@ -4,7 +4,7 @@ import {Heading} from './Heading';
 import {Section} from './Section';
 
 const meta: Meta = {
-  title: 'Components/Layout/Section',
+  title: 'Layout/Section',
   component: Section,
 };
 

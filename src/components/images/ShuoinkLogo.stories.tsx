@@ -3,7 +3,7 @@ import type {Meta} from '@storybook/react';
 import {ShuoinkLogo} from './ShuoinkLogo';
 
 const meta: Meta = {
-  title: 'Components/Images/Shuoink Logo',
+  title: 'Images/Shuoink Logo',
   component: ShuoinkLogo,
 };
 

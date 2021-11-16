@@ -3,7 +3,7 @@ import type {Meta} from '@storybook/react';
 import {Select as Component} from './Select';
 
 const meta: Meta = {
-  title: 'Components/Form Controls/Select',
+  title: 'Forms/Controls/Select',
   component: Component,
 };
 

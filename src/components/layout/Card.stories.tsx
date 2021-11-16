@@ -3,7 +3,7 @@ import type {Meta} from '@storybook/react';
 import {Card as Component} from './Card';
 
 const meta: Meta = {
-  title: 'Components/Layout/Card',
+  title: 'Layout/Card',
   component: Component,
 };
 

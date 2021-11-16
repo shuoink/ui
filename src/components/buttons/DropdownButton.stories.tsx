@@ -3,7 +3,7 @@ import type {Meta} from '@storybook/react';
 import {DropdownButton as DropdownButtonComponent} from './DropdownButton';
 
 const meta: Meta = {
-  title: 'Components/Buttons/DropdownButton',
+  title: 'Buttons/DropdownButton',
   component: DropdownButtonComponent,
 };
 

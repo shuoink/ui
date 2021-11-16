@@ -3,7 +3,7 @@ import type {Meta} from '@storybook/react';
 import {Spinner as Component} from './Spinner';
 
 const meta: Meta = {
-  title: 'Components/Feedback/Spinner',
+  title: 'Feedback/Spinner',
   component: Component,
 };
 

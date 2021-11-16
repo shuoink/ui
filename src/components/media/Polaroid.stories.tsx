@@ -3,7 +3,7 @@ import type {Meta} from '@storybook/react';
 import {Polaroid as Component} from './Polaroid';
 
 const meta: Meta = {
-  title: 'Components/Media/Polaroid',
+  title: 'Media/Polaroid',
   component: Component,
 };
 

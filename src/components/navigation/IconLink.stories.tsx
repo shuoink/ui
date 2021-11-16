@@ -4,7 +4,7 @@ import {MdAdd} from 'react-icons/md';
 import {IconLink as Component} from './IconLink';
 
 const meta: Meta = {
-  title: 'Components/Navigation/Icon Link',
+  title: 'Navigation/Icon Link',
   component: Component,
 };
 

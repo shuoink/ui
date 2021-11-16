@@ -1,11 +1,11 @@
 import type {ReactElement, ReactNode, VFC} from 'react';
 import {cloneElement} from 'react';
 import type {FieldMeta} from '../../types';
-import {FieldFeedback} from '../feedback/FieldFeedback';
+import {FieldFeedback} from '../form-feedback/FieldFeedback';
 import {Label} from './Label';
 
 type FieldGroupProps = {
-  label: ReactNode;
+  label: string;
   labelFor?: string;
   meta?: FieldMeta;
   children: ReactElement<{meta?: FieldMeta}>;

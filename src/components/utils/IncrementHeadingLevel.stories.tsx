@@ -5,7 +5,7 @@ import {HeadingLevelContext} from '../../contexts/HeadingLevelContext';
 import {IncrementHeadingLevel as Component} from './IncrementHeadingLevel';
 
 const meta: Meta = {
-  title: 'Components/Utils/IncrementHeadingLevel',
+  title: 'Utils/IncrementHeadingLevel',
   component: Component,
 };
 
