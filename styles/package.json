@@ -1,0 +1,42 @@
+{
+  "name": "@shuoink/ui-styles",
+  "version": "0.0.0",
+  "private": true,
+  "exports": {
+    "./index.css": "./index.css",
+    "./postcss-preset": "./postcss-preset.js",
+    "./tailwind-preset": "./tailwind-preset.js"
+  },
+  "main": "index.js",
+  "scripts": {
+    "depcheck": "depcheck",
+    "lint": "eslint . --ext=js,jsx,cjs,ts,tsx,mjs"
+  },
+  "eslintConfig": {
+    "plugins": [],
+    "extends": [
+      "@shuoink"
+    ],
+    "rules": {
+      "jsdoc/no-types": "off",
+      "jsdoc/require-description": "off",
+      "jsx-a11y/label-has-associated-control": "off",
+      "unicorn/filename-case": "off"
+    }
+  },
+  "dependencies": {
+    "autoprefixer": "^10.4.0",
+    "postcss-import": "^14.0.2",
+    "tailwindcss": "3.0.0-alpha.2"
+  },
+  "devDependencies": {
+    "@shuoink/eslint-config": "^11.0.1",
+    "@types/tailwindcss": "^2.2.4",
+    "depcheck": "^1.4.2",
+    "eslint": "7",
+    "postcss": "^8.3.11"
+  },
+  "peerDependencies": {
+    "postcss": "^8.0.0"
+  }
+}

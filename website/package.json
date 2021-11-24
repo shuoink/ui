@@ -1,0 +1,42 @@
+{
+  "name": "@shuoink/ui-website",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "build": "next build",
+    "depcheck": "depcheck",
+    "dev": "next dev",
+    "lint": "eslint . --ext=js,jsx,cjs,ts,tsx,mjs",
+    "start": "next start"
+  },
+  "eslintConfig": {
+    "plugins": [],
+    "extends": [
+      "@shuoink"
+    ],
+    "rules": {
+      "jsdoc/no-types": "off",
+      "jsdoc/require-description": "off",
+      "jsx-a11y/label-has-associated-control": "off",
+      "unicorn/filename-case": "off"
+    }
+  },
+  "dependencies": {
+    "@shuoink/ui-base": "workspace:*",
+    "next": "12.0.4",
+    "next-transpile-modules": "^9.0.0",
+    "react": "17.0.2",
+    "react-dom": "17.0.2"
+  },
+  "devDependencies": {
+    "@shuoink/eslint-config": "^11.0.1",
+    "@shuoink/ui-styles": "workspace:^",
+    "@types/node": "16.11.7",
+    "@types/react": "17.0.35",
+    "depcheck": "^1.4.2",
+    "eslint": "7",
+    "eslint-config-next": "^12.0.4",
+    "postcss": "^8.3.11",
+    "typescript": "4.4.4"
+  }
+}

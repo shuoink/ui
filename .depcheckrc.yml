@@ -1,0 +1,2 @@
+ignores: ['@babel/*', '@types/*', 'sort-package-json', 'ts-node'] # TODO: still working on this
+ignorePatterns: ['base', 'storybook', 'website']

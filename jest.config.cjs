@@ -1,11 +1,7 @@
+// @ts-expect-error: not typed
+const baseConfig = require('./jest.config.base.cjs');
+
 module.exports = {
-  collectCoverageFrom: ['src/**/*.{ts,tsx,js,jsx}'],
-  coveragePathIgnorePatterns: [
-    '[.]test[.]',
-    '[.]stories[.]',
-    '[.]d[.]ts$',
-    '__test__',
-    '__snapshots__',
-    '__mocks__',
-  ],
+  ...baseConfig,
+  projects: ['base', 'website', 'storybook', 'styles'],
 };

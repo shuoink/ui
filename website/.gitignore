@@ -1,17 +1,9 @@
-# generated code
-src/index.ts
-
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # dependencies
-node_modules
-.pnp.*
-.yarn/*
-!.yarn/patches
-!.yarn/plugins
-!.yarn/releases
-!.yarn/sdks
-!.yarn/versions
+/node_modules
+/.pnp
+.pnp.js
 
 # testing
 /coverage
@@ -21,8 +13,7 @@ node_modules
 /out/
 
 # production
-build
-dist
+/build
 
 # misc
 .DS_Store
@@ -34,24 +25,13 @@ yarn-debug.log*
 yarn-error.log*
 
 # local env files
-.env
 .env.local
 .env.development.local
 .env.test.local
 .env.production.local
-*.local
 
 # vercel
 .vercel
-
-# typescript
-*.tsbuildinfo
-
-# log files
-*.log
-
-# IDE settings
-.vscode
 
 # typescript
 *.tsbuildinfo

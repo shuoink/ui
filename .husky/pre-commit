@@ -1,7 +1,8 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
-npm run --if-present codegen
-npm run --if-present build
-npm run --if-present lint
-npm run --if-present test
+yarn workspaces foreach -v run depcheck
+yarn workspaces foreach -v run codegen
+yarn workspaces foreach -v run build
+yarn run lint-staged
+yarn run test

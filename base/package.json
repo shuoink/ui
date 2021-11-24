@@ -1,0 +1,77 @@
+{
+  "name": "@shuoink/ui-base",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": {
+      "require": "./dist/cjs/index.js",
+      "import": "./dist/esm/index.js",
+      "types": "./dist/esm/index.d.ts"
+    },
+    "./src": "./src/index.ts",
+    "./package.json": "./package.json"
+  },
+  "main": "./dist/cjs/index.js",
+  "scripts": {
+    "build": "(rm -rf dist || true) && tsc -p tsconfig.cjs.json && tsc -p tsconfig.esm.json && tsc-esm-fix --tsconfig tsconfig.esm.json",
+    "build:watch": "tsc --noEmit --watch",
+    "codegen": "node --loader ts-node/esm ./scripts/codegen.ts",
+    "depcheck": "depcheck",
+    "lint": "eslint . --ext=js,jsx,cjs,ts,tsx,mjs",
+    "test": "jest"
+  },
+  "eslintConfig": {
+    "plugins": [],
+    "extends": [
+      "@shuoink"
+    ],
+    "rules": {
+      "jsdoc/no-types": "off",
+      "jsdoc/require-description": "off",
+      "jsx-a11y/label-has-associated-control": "off",
+      "unicorn/filename-case": "off"
+    }
+  },
+  "eslintIgnore": [
+    "node_modules",
+    "dist"
+  ],
+  "dependencies": {
+    "@reach/auto-id": "^0.16.0",
+    "classnames": "^2.3.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-icons": "^4.3.1",
+    "react-is": "^16.13.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.16.0",
+    "@babel/preset-env": "^7.16.4",
+    "@babel/preset-react": "^7.16.0",
+    "@babel/preset-typescript": "^7.16.0",
+    "@shuoink/eslint-config": "^11.0.1",
+    "@spudly/pushpop": "^2.1.3",
+    "@storybook/react": "6.4.0-rc.3",
+    "@storybook/testing-library": "^0.0.3",
+    "@testing-library/react": "^12.1.2",
+    "@types/jest": "^27.0.2",
+    "@types/node": "^16.11.7",
+    "@types/react": "^17.0.35",
+    "@types/react-dom": "^17.0.11",
+    "@types/react-is": "^17.0.3",
+    "depcheck": "^1.4.2",
+    "eslint": "7",
+    "globby": "^12.0.2",
+    "jest": "^27.3.1",
+    "ts-node": "^10.4.0",
+    "tsc-esm-fix": "^2.7.4",
+    "typescript": "^4.4.4"
+  },
+  "peerDependencies": {
+    "@shuoink/ui-styles": "workspace:^"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}
