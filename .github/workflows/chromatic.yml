@@ -20,9 +20,11 @@ jobs:
 
       - name: Install dependencies
         run: yarn
+        working-directory: storybook
 
       - name: Publish to Chromatic
         uses: chromaui/action@v1
         with:
+          workingDir: storybook
           token: ${{ secrets.GH_TOKEN }}
           projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
