@@ -23,7 +23,6 @@ export const Open: VFC = () => (
 );
 
 export const Interactive: Story = () => {
-  // eslint-disable-next-line unicorn/no-unreadable-array-destructuring -- boo hiss. disable this rule
   const [isOpen, , , toggle] = useToggle();
   return (
     <Button className="flex border items-center" type="button" onClick={toggle}>

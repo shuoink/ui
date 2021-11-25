@@ -13,7 +13,6 @@ export const AccordionSection: FC<{
   dock?: DockConfig;
   toggle?: () => void;
 }> = ({children, dock, heading, isOpen: isOpenProp, toggle: toggleProp}) => {
-  // eslint-disable-next-line unicorn/no-unreadable-array-destructuring -- disable this rule
   const [_isOpen, , , _toggle] = useToggle();
   const isOpen = isOpenProp != null ? isOpenProp : _isOpen;
   const toggle = isOpenProp != null ? toggleProp : _toggle;

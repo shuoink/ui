@@ -12,7 +12,6 @@ const meta: Meta = {
 const CONTENT = 'This is the content '.repeat(20);
 
 export const Collapsible: VFC = () => {
-  // eslint-disable-next-line unicorn/no-unreadable-array-destructuring -- disable this rule
   const [isOpen, , , toggle] = useToggle();
   return (
     <div className="flex flex-wrap gap-2">

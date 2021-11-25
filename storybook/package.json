@@ -10,17 +10,14 @@
     "storybook": "start-storybook -p 6006"
   },
   "eslintConfig": {
-    "plugins": [],
     "extends": [
       "@shuoink"
-    ],
-    "rules": {
-      "jsdoc/no-types": "off",
-      "jsdoc/require-description": "off",
-      "jsx-a11y/label-has-associated-control": "off",
-      "unicorn/filename-case": "off"
-    }
+    ]
   },
+  "eslintIgnore": [
+    "node_modules",
+    "storybook-static"
+  ],
   "dependencies": {
     "@shuoink/ui-styles": "workspace:^",
     "@storybook/addons": "^6.3.12",
@@ -31,14 +28,14 @@
   },
   "devDependencies": {
     "@babel/core": "^7.16.0",
-    "@shuoink/eslint-config": "^11.0.1",
+    "@shuoink/eslint-config": "^12.0.1",
     "@storybook/addon-essentials": "^6.4.0-beta.31",
     "@storybook/addon-interactions": "^6.4.0-beta.31",
     "@storybook/addon-postcss": "^2.0.0",
     "@storybook/react": "^6.4.0-beta.31",
     "depcheck": "^1.4.2",
-    "eslint": "7",
-    "postcss": "^8.3.11"
+    "eslint": "8.3.0",
+    "postcss": "^8.4.1"
   },
   "peerDependencies": {
     "postcss": "*"
