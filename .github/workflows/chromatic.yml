@@ -19,12 +19,17 @@ jobs:
         run: npm i -g yarn
 
       - name: Install dependencies
-        run: yarn
+        run: yarn --immutable
+        working-directory: storybook
+
+      - name: Build Storybook
+        run: yarn build-storybook
         working-directory: storybook
 
       - name: Publish to Chromatic
         uses: chromaui/action@v1
         with:
           workingDir: storybook
+          storybookBuildDir: storybook-static
           token: ${{ secrets.GH_TOKEN }}
           projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
