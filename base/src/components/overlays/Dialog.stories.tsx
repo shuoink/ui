@@ -1,7 +1,7 @@
 import type {VFC} from 'react';
 import type {Meta} from '@storybook/react';
 import {noop} from '../../utils/noop';
-import {Heading} from '../layout/Heading';
+import {Heading} from '../typography/Heading';
 import {Dialog as Component} from './Dialog';
 
 const meta: Meta = {

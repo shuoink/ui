@@ -48,6 +48,7 @@
     "@spudly/pushpop": "^2.1.3",
     "@storybook/react": "6.4.0-rc.3",
     "@storybook/testing-library": "^0.0.7",
+    "@storybook/testing-react": "^1.0.0",
     "@testing-library/react": "^12.1.2",
     "@types/jest": "^27.0.3",
     "@types/node": "^16.11.10",

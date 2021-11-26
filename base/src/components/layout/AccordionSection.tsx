@@ -4,8 +4,8 @@ import {useToggle} from '../../hooks/useToggle';
 import type {DockConfig} from '../../types';
 import {Button} from '../buttons/Button';
 import {CollapsibleIcon} from '../icons/CollapsibleIcon';
+import {Heading} from '../typography/Heading';
 import {Collapsible} from './Collapsible';
-import {Heading} from './Heading';
 
 export const AccordionSection: FC<{
   heading: ReactNode;

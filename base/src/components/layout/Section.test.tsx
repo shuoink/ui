@@ -1,6 +1,6 @@
 /** @jest-environment jsdom */
 import {render, cleanup} from '@testing-library/react';
-import {Heading} from './Heading';
+import {Heading} from '../typography/Heading';
 import {Section} from './Section';
 
 afterEach(cleanup);

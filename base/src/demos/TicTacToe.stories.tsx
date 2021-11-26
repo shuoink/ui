@@ -1,7 +1,7 @@
 import {useState} from 'react';
 import type {Meta, Story} from '@storybook/react';
 import {unstable_batchedUpdates as batchedUpdates} from 'react-dom';
-import {Heading} from '../components/layout/Heading';
+import {Heading} from '../components/typography/Heading';
 import {Button} from '../components/buttons/Button';
 
 const meta: Meta = {

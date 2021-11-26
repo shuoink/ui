@@ -1,6 +1,6 @@
 import type {VFC} from 'react';
 import type {Meta} from '@storybook/react';
-import {Heading} from './Heading';
+import {Heading} from '../typography/Heading';
 import {Section} from './Section';
 
 const meta: Meta = {
