@@ -1,15 +1,15 @@
 import type {VFC} from 'react';
 import type {Meta} from '@storybook/react';
-import {Button as ButtonComponent} from './Button';
+import {Button as Component} from './Button';
 
 const meta: Meta = {
   title: 'Base/Buttons/Button',
-  component: ButtonComponent,
+  component: Component,
 };
 
 export const Button: VFC = () => (
   <>
-    <ButtonComponent>Button Text</ButtonComponent>
+    <Component>Button Text</Component>
   </>
 );
 

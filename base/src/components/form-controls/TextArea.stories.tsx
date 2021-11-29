@@ -30,30 +30,29 @@ export const Docked: VFC = () => (
 
     <Component
       value="left, preserveBorder"
-      meta={{dock: {left: true, preserveBorder: true}}}
+      meta={{dock: {left: ['borderRadius']}}}
     />
     <Component
       value="right, preserveBorder"
-      meta={{dock: {right: true, preserveBorder: true}}}
+      meta={{dock: {right: ['borderRadius']}}}
     />
     <Component
       value="top, preserveBorder"
-      meta={{dock: {top: true, preserveBorder: true}}}
+      meta={{dock: {top: ['borderRadius']}}}
     />
     <Component
       value="bottom, preserveBorder"
-      meta={{dock: {bottom: true, preserveBorder: true}}}
+      meta={{dock: {bottom: ['borderRadius']}}}
     />
 
     <Component
       value="all, preserveBorder"
       meta={{
         dock: {
-          left: true,
-          right: true,
-          top: true,
-          bottom: true,
-          preserveBorder: true,
+          left: ['borderRadius'],
+          right: ['borderRadius'],
+          top: ['borderRadius'],
+          bottom: ['borderRadius'],
         },
       }}
     />

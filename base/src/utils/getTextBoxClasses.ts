@@ -1,6 +1,6 @@
 import classNames from 'classnames';
-import type {DockConfig} from '../types';
-import {getDockClasses} from './getDockClasses';
+import type {DockConfig} from './dock';
+import {getDockClasses} from './dock';
 import {getValidityClasses} from './getValidityClasses';
 
 export const getTextBoxClasses = ({

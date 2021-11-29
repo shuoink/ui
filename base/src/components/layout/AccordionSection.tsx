@@ -1,10 +1,10 @@
 import classNames from 'classnames';
 import type {FC, ReactNode} from 'react';
 import {useToggle} from '../../hooks/useToggle';
-import type {DockConfig} from '../../types';
 import {Button} from '../buttons/Button';
 import {CollapsibleIcon} from '../icons/CollapsibleIcon';
 import {Heading} from '../typography/Heading';
+import type {DockConfig} from '../../utils/dock';
 import {Collapsible} from './Collapsible';
 
 export const AccordionSection: FC<{

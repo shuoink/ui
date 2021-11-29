@@ -1,5 +1,5 @@
 import {forwardRef} from 'react';
-import type {DockConfig} from '../../types';
+import type {DockConfig} from '../../utils/dock';
 import {getButtonClasses} from '../../utils/getButtonClasses';
 
 export const ButtonLink = forwardRef<

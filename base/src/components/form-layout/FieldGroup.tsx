@@ -21,11 +21,14 @@ export const FieldGroup: VFC<FieldGroupProps> = ({
     <div>
       <Label htmlFor={labelFor}>{label}</Label>
       {cloneElement(children, {
-        meta: {...meta, dock: {bottom: meta?.valid === false}},
+        meta: {
+          ...meta,
+          dock: {bottom: meta?.valid === false ? true : undefined},
+        },
       })}
       <FieldFeedback
         {...meta}
-        dock={{top: true}}
+        dock={{top: ['borderRadius']}}
         displayName={meta?.displayName ?? label}
       />
     </div>

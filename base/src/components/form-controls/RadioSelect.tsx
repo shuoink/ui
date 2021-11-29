@@ -2,9 +2,9 @@ import type {ChangeEvent, FC} from 'react';
 import {Children} from 'react';
 import type {FieldMeta} from '../../types';
 import {Label} from '../form-layout/Label';
-import {getOptionLabel} from '../utils/getOptionLabel';
-import {getOptionValue} from '../utils/getOptionValue';
-import {isOptionElement} from '../utils/isOptionElement';
+import {getOptionLabel} from '../../utils/getOptionLabel';
+import {getOptionValue} from '../../utils/getOptionValue';
+import {isOptionElement} from '../../utils/isOptionElement';
 import {Radio} from './Radio';
 
 export const RadioSelect: FC<{

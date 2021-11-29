@@ -15,7 +15,7 @@ export const Invalid: VFC = () => (
       meta={{dock: {bottom: true}, touched: true, valid: false}}
     />
     <FieldFeedbackComponent
-      dock={{top: true}}
+      dock={{top: ['borderRadius']}}
       displayName="Name"
       touched
       errors={['Name is invalid!']}

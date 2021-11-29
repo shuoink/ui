@@ -1,4 +1,4 @@
-import type {ElementOfType} from '../../types';
+import type {ElementOfType} from '../types';
 import {jsxTextContent} from './jsxTextContent';
 
 export const getOptionValue = (option: ElementOfType<'option'>): string =>

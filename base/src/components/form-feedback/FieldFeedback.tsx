@@ -1,6 +1,6 @@
 import type {VFC} from 'react';
 import classnames from 'classnames';
-import {getDockClasses} from '../../utils/getDockClasses';
+import {getDockClasses} from '../../utils/dock';
 import {getValidityClasses} from '../../utils/getValidityClasses';
 import type {FieldMeta} from '../../types';
 
@@ -14,7 +14,7 @@ export const FieldFeedback: VFC<FieldMeta> = ({
   if (!touched || valid) {
     return null;
   }
-  const dockClasses: string = getDockClasses({...dock, preserveBorder: true});
+  const dockClasses: string = getDockClasses(dock);
   const validityClasses: string = getValidityClasses(false);
   return (
     <div

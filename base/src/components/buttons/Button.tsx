@@ -1,21 +1,23 @@
 import type {FC} from 'react';
 import {getButtonClasses} from '../../utils/getButtonClasses';
-import type {DockConfig, StyleableProps} from '../../types';
+import type {StyleableProps} from '../../types';
 import {getClassName} from '../../utils/getClassName';
 import {getStyle} from '../../utils/getStyle';
+import type {DockConfig} from '../../utils/dock';
 
 type StyleData = {
   dock?: DockConfig;
 };
 
 type Props = StyleableProps<JSX.IntrinsicElements['button'], StyleData> &
-  StyleData;
+  StyleData & {remove?: () => void};
 
 export const Button: FC<Props> = ({
   type = 'button',
   className: classNameProp,
   style: styleProp,
   dock,
+  remove,
   ...rest
 }) => {
   const styleData = {dock};
