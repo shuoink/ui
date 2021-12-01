@@ -56,11 +56,11 @@
     "styles"
   ],
   "devDependencies": {
-    "@shuoink/eslint-config": "^12.0.1",
+    "@shuoink/eslint-config": "^13.0.0",
     "depcheck": "^1.4.2",
     "eslint": "^8.3.0",
     "husky": "^7.0.4",
-    "jest": "^27.3.1",
+    "jest": "^27.4.3",
     "lint-staged": "^12.1.2",
     "sort-package-json": "^1.53.1"
   },

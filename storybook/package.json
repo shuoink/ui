@@ -20,23 +20,23 @@
   ],
   "dependencies": {
     "@shuoink/ui-styles": "workspace:^",
-    "@storybook/addons": "^6.3.12",
-    "@storybook/theming": "^6.3.12",
+    "@storybook/addons": "^6.4.3",
+    "@storybook/theming": "^6.4.3",
     "classnames": "^2.3.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   },
   "devDependencies": {
     "@babel/core": "^7.16.0",
-    "@shuoink/eslint-config": "^12.0.1",
-    "@storybook/addon-a11y": "^6.3.12",
-    "@storybook/addon-essentials": "^6.4.0-beta.31",
-    "@storybook/addon-interactions": "^6.4.0-beta.31",
+    "@shuoink/eslint-config": "^13.0.0",
+    "@storybook/addon-a11y": "^6.4.3",
+    "@storybook/addon-essentials": "^6.4.3",
+    "@storybook/addon-interactions": "^6.4.3",
     "@storybook/addon-postcss": "^2.0.0",
-    "@storybook/react": "^6.4.0-beta.31",
+    "@storybook/react": "^6.4.3",
     "depcheck": "^1.4.2",
     "eslint": "8.3.0",
-    "postcss": "^8.4.1"
+    "postcss": "^8.4.4"
   },
   "peerDependencies": {
     "postcss": "*"
