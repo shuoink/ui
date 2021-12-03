@@ -72,4 +72,5 @@ export const TicTacToe: Story = () => {
   );
 };
 
+// eslint-disable-next-line storybook/csf-component -- temporary
 export default meta;

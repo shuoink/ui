@@ -22,10 +22,12 @@
     "test": "jest"
   },
   "eslintConfig": {
-    "plugins": [],
     "extends": [
       "@shuoink"
-    ]
+    ],
+    "rules": {
+      "storybook/no-title-property-in-meta": "off"
+    }
   },
   "eslintIgnore": [
     "node_modules",

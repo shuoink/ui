@@ -1,4 +1,3 @@
-import type {VFC} from 'react';
 import type {Meta, Story} from '@storybook/react';
 import {MdBrowserNotSupported} from 'react-icons/md';
 import {TabButton as Component} from './TabButton';

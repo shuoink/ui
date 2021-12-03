@@ -1,5 +1,5 @@
 module.exports = {
-  stories: ['../../**/*.stories.@(js|jsx|ts|tsx)'],
+  stories: ['../..'],
   addons: [
     {
       name: '@storybook/addon-postcss',
