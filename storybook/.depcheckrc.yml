@@ -1,1 +1,0 @@
-ignores: ['@babel/*', '@types/*', '@storybook/addon-*']

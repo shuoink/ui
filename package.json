@@ -1,17 +1,224 @@
 {
-  "name": "@shuoink/ui-monorepo",
-  "private": true,
-  "workspaces": [
-    "base",
-    "website",
-    "storybook",
-    "styles"
+  "name": "@shuoink/ui",
+  "version": "0.0.0",
+  "type": "module",
+  "exports": {
+    "./Accordion": {
+      "types": "./dist/components/layout/Accordion.d.ts",
+      "default": "./dist/components/layout/Accordion.js"
+    },
+    "./AccordionSection": {
+      "types": "./dist/components/layout/AccordionSection.d.ts",
+      "default": "./dist/components/layout/AccordionSection.js"
+    },
+    "./Alert": {
+      "types": "./dist/components/feedback/Alert.d.ts",
+      "default": "./dist/components/feedback/Alert.js"
+    },
+    "./Backdrop": {
+      "types": "./dist/components/overlays/Backdrop.d.ts",
+      "default": "./dist/components/overlays/Backdrop.js"
+    },
+    "./Button": {
+      "types": "./dist/components/buttons/Button.d.ts",
+      "default": "./dist/components/buttons/Button.js"
+    },
+    "./ButtonGroup": {
+      "types": "./dist/components/buttons/ButtonGroup.d.ts",
+      "default": "./dist/components/buttons/ButtonGroup.js"
+    },
+    "./ButtonLink": {
+      "types": "./dist/components/navigation/ButtonLink.d.ts",
+      "default": "./dist/components/navigation/ButtonLink.js"
+    },
+    "./Card": {
+      "types": "./dist/components/layout/Card.d.ts",
+      "default": "./dist/components/layout/Card.js"
+    },
+    "./Checkbox": {
+      "types": "./dist/components/form-controls/Checkbox.d.ts",
+      "default": "./dist/components/form-controls/Checkbox.js"
+    },
+    "./Collapsible": {
+      "types": "./dist/components/layout/Collapsible.d.ts",
+      "default": "./dist/components/layout/Collapsible.js"
+    },
+    "./CollapsibleIcon": {
+      "types": "./dist/components/icons/CollapsibleIcon.d.ts",
+      "default": "./dist/components/icons/CollapsibleIcon.js"
+    },
+    "./Copyright": {
+      "types": "./dist/components/utils/Copyright.d.ts",
+      "default": "./dist/components/utils/Copyright.js"
+    },
+    "./Corset": {
+      "types": "./dist/components/layout/Corset.d.ts",
+      "default": "./dist/components/layout/Corset.js"
+    },
+    "./Dialog": {
+      "types": "./dist/components/overlays/Dialog.d.ts",
+      "default": "./dist/components/overlays/Dialog.js"
+    },
+    "./Disclaimer": {
+      "types": "./dist/components/typography/Disclaimer.d.ts",
+      "default": "./dist/components/typography/Disclaimer.js"
+    },
+    "./Dropdown": {
+      "types": "./dist/components/overlays/Dropdown.d.ts",
+      "default": "./dist/components/overlays/Dropdown.js"
+    },
+    "./DropdownButton": {
+      "types": "./dist/components/buttons/DropdownButton.d.ts",
+      "default": "./dist/components/buttons/DropdownButton.js"
+    },
+    "./ErrorBoundary": {
+      "types": "./dist/components/utils/ErrorBoundary.d.ts",
+      "default": "./dist/components/utils/ErrorBoundary.js"
+    },
+    "./FieldFeedback": {
+      "types": "./dist/components/form-feedback/FieldFeedback.d.ts",
+      "default": "./dist/components/form-feedback/FieldFeedback.js"
+    },
+    "./FieldGroup": {
+      "types": "./dist/components/form-layout/FieldGroup.d.ts",
+      "default": "./dist/components/form-layout/FieldGroup.js"
+    },
+    "./Heading": {
+      "types": "./dist/components/typography/Heading.d.ts",
+      "default": "./dist/components/typography/Heading.js"
+    },
+    "./Hyperlink": {
+      "types": "./dist/components/navigation/Hyperlink.d.ts",
+      "default": "./dist/components/navigation/Hyperlink.js"
+    },
+    "./IconButton": {
+      "types": "./dist/components/buttons/IconButton.d.ts",
+      "default": "./dist/components/buttons/IconButton.js"
+    },
+    "./IconLink": {
+      "types": "./dist/components/navigation/IconLink.d.ts",
+      "default": "./dist/components/navigation/IconLink.js"
+    },
+    "./IconLinks": {
+      "types": "./dist/components/icons/IconLinks.d.ts",
+      "default": "./dist/components/icons/IconLinks.js"
+    },
+    "./IncrementHeadingLevel": {
+      "types": "./dist/components/utils/IncrementHeadingLevel.d.ts",
+      "default": "./dist/components/utils/IncrementHeadingLevel.js"
+    },
+    "./InfiniteCarousel": {
+      "types": "./dist/components/media/InfiniteCarousel.d.ts",
+      "default": "./dist/components/media/InfiniteCarousel.js"
+    },
+    "./Label": {
+      "types": "./dist/components/form-layout/Label.d.ts",
+      "default": "./dist/components/form-layout/Label.js"
+    },
+    "./LinkButton": {
+      "types": "./dist/components/buttons/LinkButton.d.ts",
+      "default": "./dist/components/buttons/LinkButton.js"
+    },
+    "./LinkList": {
+      "types": "./dist/components/navigation/LinkList.d.ts",
+      "default": "./dist/components/navigation/LinkList.js"
+    },
+    "./MasonryGrid": {
+      "types": "./dist/components/layout/MasonryGrid.d.ts",
+      "default": "./dist/components/layout/MasonryGrid.js"
+    },
+    "./Polaroid": {
+      "types": "./dist/components/media/Polaroid.d.ts",
+      "default": "./dist/components/media/Polaroid.js"
+    },
+    "./ProgressSpinner": {
+      "types": "./dist/components/feedback/ProgressSpinner.d.ts",
+      "default": "./dist/components/feedback/ProgressSpinner.js"
+    },
+    "./Radio": {
+      "types": "./dist/components/form-controls/Radio.d.ts",
+      "default": "./dist/components/form-controls/Radio.js"
+    },
+    "./RadioSelect": {
+      "types": "./dist/components/form-controls/RadioSelect.d.ts",
+      "default": "./dist/components/form-controls/RadioSelect.js"
+    },
+    "./Section": {
+      "types": "./dist/components/layout/Section.d.ts",
+      "default": "./dist/components/layout/Section.js"
+    },
+    "./Select": {
+      "types": "./dist/components/form-controls/Select.d.ts",
+      "default": "./dist/components/form-controls/Select.js"
+    },
+    "./ShuoinkLogo": {
+      "types": "./dist/components/images/ShuoinkLogo.d.ts",
+      "default": "./dist/components/images/ShuoinkLogo.js"
+    },
+    "./SkipLink": {
+      "types": "./dist/components/a11y/SkipLink.d.ts",
+      "default": "./dist/components/a11y/SkipLink.js"
+    },
+    "./Slider": {
+      "types": "./dist/components/form-controls/Slider.d.ts",
+      "default": "./dist/components/form-controls/Slider.js"
+    },
+    "./Spinner": {
+      "types": "./dist/components/feedback/Spinner.d.ts",
+      "default": "./dist/components/feedback/Spinner.js"
+    },
+    "./Switch": {
+      "types": "./dist/components/form-controls/Switch.d.ts",
+      "default": "./dist/components/form-controls/Switch.js"
+    },
+    "./TabButton": {
+      "types": "./dist/components/buttons/TabButton.d.ts",
+      "default": "./dist/components/buttons/TabButton.js"
+    },
+    "./TabButtonGroup": {
+      "types": "./dist/components/buttons/TabButtonGroup.d.ts",
+      "default": "./dist/components/buttons/TabButtonGroup.js"
+    },
+    "./TabLink": {
+      "types": "./dist/components/navigation/TabLink.d.ts",
+      "default": "./dist/components/navigation/TabLink.js"
+    },
+    "./Tabs": {
+      "types": "./dist/components/layout/Tabs.d.ts",
+      "default": "./dist/components/layout/Tabs.js"
+    },
+    "./tailwind-preset": {
+      "types": "./tailwind-preset.d.ts",
+      "default": "./tailwind-preset.cjs"
+    },
+    "./TextArea": {
+      "types": "./dist/components/form-controls/TextArea.d.ts",
+      "default": "./dist/components/form-controls/TextArea.js"
+    },
+    "./TextConversation": {
+      "types": "./dist/components/media/TextConversation.d.ts",
+      "default": "./dist/components/media/TextConversation.js"
+    },
+    "./TextInput": {
+      "types": "./dist/components/form-controls/TextInput.d.ts",
+      "default": "./dist/components/form-controls/TextInput.js"
+    },
+    "./TopNav": {
+      "types": "./dist/components/navigation/TopNav.d.ts",
+      "default": "./dist/components/navigation/TopNav.js"
+    }
+  },
+  "files": [
+    "dist",
+    "tailwind-preset.cjs",
+    "tailwind-preset.d.ts"
   ],
   "scripts": {
-    "depcheck": "depcheck",
-    "lint": "eslint . --ext=js,jsx,cjs,ts,tsx,mjs",
+    "build": "(rm -rf dist || true) && tsc -p tsconfig.build.json",
+    "dev": "ladle serve",
+    "lint": "eslint . --ext=js,jsx,cjs,ts,tsx,mjs,mts,cts",
     "prepare": "husky install",
-    "test": "jest"
+    "test": "cross-env NODE_OPTIONS=--experimental-vm-modules jest"
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
@@ -37,35 +244,75 @@
     "trailingComma": "all"
   },
   "eslintConfig": {
+    "parserOptions": {
+      "extraFileExtensions": [],
+      "project": "./tsconfig.json"
+    },
     "plugins": [],
     "extends": [
       "@shuoink"
     ],
     "rules": {
-      "jsdoc/check-examples": "off"
+      "@typescript-eslint/no-unsafe-return": "off",
+      "import/extensions": [
+        "error",
+        "always"
+      ],
+      "import/no-unresolved": "off",
+      "jsdoc/check-examples": "off",
+      "node/file-extension-in-import": "off",
+      "node/no-missing-import": "off",
+      "storybook/no-title-property-in-meta": "off"
     }
   },
   "eslintIgnore": [
     "coverage",
     "node_modules",
     "dist",
-    ".yarn",
-    "base",
-    "website",
-    "storybook",
-    "styles"
+    "storybook-static"
   ],
+  "dependencies": {
+    "@popperjs/core": "^2.11.0",
+    "autoprefixer": "^10.4.0",
+    "clsx": "^1.2.1",
+    "default-import": "^1.1.4",
+    "postcss-import": "^14.0.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-icons": "^4.3.1",
+    "react-is": "^18.2.0",
+    "react-popper": "^2.2.5",
+    "tailwindcss": "^3.1.6"
+  },
   "devDependencies": {
+    "@babel/core": "^7.16.0",
+    "@babel/preset-env": "^7.16.4",
+    "@babel/preset-react": "^7.16.0",
+    "@babel/preset-typescript": "^7.16.0",
+    "@ladle/react": "^1.3.0",
     "@shuoink/eslint-config": "^13.0.0",
+    "@spudly/pushpop": "^2.1.3",
+    "@testing-library/react": "^13.3.0",
+    "@types/jest": "^28.1.5",
+    "@types/node": "^18.0.4",
+    "@types/react": "^18.0.15",
+    "@types/react-dom": "^18.0.6",
+    "@types/react-is": "^17.0.3",
+    "@types/tailwindcss": "^3.1.0",
+    "cross-env": "^7.0.3",
     "depcheck": "^1.4.2",
     "eslint": "^8.3.0",
-    "husky": "^7.0.4",
-    "jest": "^27.4.3",
-    "lint-staged": "^12.1.2",
-    "sort-package-json": "^1.53.1"
+    "globby": "^13.1.2",
+    "husky": "^8.0.1",
+    "jest": "^28.1.3",
+    "jest-environment-jsdom": "^28.1.3",
+    "lint-staged": "^13.0.3",
+    "postcss": "^8.4.4",
+    "sort-package-json": "^1.53.1",
+    "ts-node": "^10.4.0",
+    "typescript": "^4.5.2"
   },
   "engines": {
     "node": ">=16.0.0"
-  },
-  "packageManager": "yarn@3.1.0"
+  }
 }

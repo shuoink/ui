@@ -1,1 +1,0 @@
-ignores: ['@babel/*', '@types/*', 'tsc-esm-fix', 'ts-node']

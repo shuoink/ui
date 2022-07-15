@@ -1,9 +1,0 @@
-{
-  "extends": "../tsconfig.json",
-  "compilerOptions": {
-    "isolatedModules": true,
-    "jsx": "preserve"
-  },
-  "include": ["next-env.d.ts", "pages/**/*.ts", "pages/**/*.tsx"],
-  "exclude": ["node_modules"]
-}

@@ -9,20 +9,11 @@
     "allowSyntheticDefaultImports": true,
     "strict": true,
     "forceConsistentCasingInFileNames": true,
-    "module": "commonjs",
-    "moduleResolution": "Node",
+    "moduleResolution": "NodeNext",
     "resolveJsonModule": true,
     "noEmit": true,
     "jsx": "react-jsx",
-    "incremental": true
+    "module": "NodeNext"
   },
-  "include": [
-    "**/*.ts",
-    "**/*.tsx",
-    "**/*.js",
-    "**/*.jsx",
-    "**/*.cjs",
-    "**/*.mjs"
-  ],
   "exclude": ["node_modules"]
 }

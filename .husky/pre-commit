@@ -1,8 +1,8 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
-yarn workspaces foreach -v run depcheck
-yarn workspaces foreach -v run codegen
-yarn workspaces foreach -v run build
-yarn run lint-staged
-yarn run test
+npx --no-install depcheck
+npm run build
+npx --no-install ts-node-esm ./scripts/package-exports.ts --stage
+npx --no-install lint-staged
+npm run test

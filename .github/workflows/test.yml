@@ -8,7 +8,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: ['14', '16', '17']
+        node-version: ['14', '16', '18'],
 
     steps:
       - name: Checkout repository
@@ -19,14 +19,11 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
 
-      - name: Install Yarn
-        run: npm i -g yarn
-
       - name: Install dependencies
-        run: yarn --immutable
+        run: npm ci
 
       - name: Run the tests
-        run: yarn test --coverage
+        run: npm test -- --coverage
 
       - name: Upload coverage to Codecov
         uses: codecov/codecov-action@v2

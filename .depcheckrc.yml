@@ -1,2 +1,11 @@
-ignores: ['@babel/*', '@types/*', 'sort-package-json', 'ts-node'] # TODO: still working on this
-ignorePatterns: ['base', 'storybook', 'website']
+ignores:
+  [
+    '@babel/*',
+    '@types/*',
+    'sort-package-json',
+    'ts-node',
+    'autoprefixer',
+    'postcss-import',
+    'depcheck',
+    'jest-environment-jsdom',
+  ]
