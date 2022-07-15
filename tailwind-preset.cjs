@@ -8,8 +8,10 @@ const colors = require('tailwindcss/colors.js');
 module.exports = ({content = []} = {}) => ({
   mode: 'jit',
   content: [
-    // eslint-disable-next-line node/no-path-concat -- glob
-    `${__dirname}/dist/**/*.{js,cjs,mjs,jsx,ts,tsx,mts,cts}`,
+    // eslint-disable-next-line unicorn/prefer-string-replace-all -- too new
+    `${__dirname
+      .replace(/^.*[/\\]node_modules[/\\]/u, './node_modules/')
+      .replace(/\\/gu, '/')}/dist/**/*.{js,cjs,mjs,jsx,ts,tsx,mts,cts}`,
     ...content,
   ],
   darkMode: 'class',
