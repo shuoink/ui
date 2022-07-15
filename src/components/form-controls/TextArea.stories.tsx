@@ -1,5 +1,5 @@
 import type {FC} from 'react';
-import {TextArea as Component} from './TextArea.js';
+import Component from './TextArea.js';
 
 const meta = {
   title: 'Base/Forms/Controls/TextArea',

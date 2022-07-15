@@ -1,5 +1,5 @@
 import type {FC} from 'react';
-import {Select as Component} from './Select.js';
+import Component from './Select.js';
 
 const meta = {
   title: 'Base/Forms/Controls/Select',

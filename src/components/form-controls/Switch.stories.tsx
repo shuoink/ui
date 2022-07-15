@@ -1,8 +1,8 @@
 import type {ChangeEvent, FC} from 'react';
 import {useState} from 'react';
 import {noop} from '../../_internal/utils/noop.js';
-import {Heading} from '../typography/Heading.js';
-import {Switch as SwitchControl} from './Switch.js';
+import Heading from '../typography/Heading.js';
+import SwitchControl from './Switch.js';
 
 const meta = {
   title: 'Base/Forms/Controls/Switch',

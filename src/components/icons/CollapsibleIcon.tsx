@@ -5,7 +5,7 @@ import {defaultImport} from 'default-import';
 
 const clsx = defaultImport(_clsx);
 
-export const CollapsibleIcon: FC<{isOpen?: boolean}> = ({isOpen}) => (
+const CollapsibleIcon: FC<{isOpen?: boolean}> = ({isOpen}) => (
   <MdExpandMore
     title="Expanded/Collapsed Icon"
     className={clsx('ml-2 duration-200 transform', {
@@ -13,3 +13,5 @@ export const CollapsibleIcon: FC<{isOpen?: boolean}> = ({isOpen}) => (
     })}
   />
 );
+
+export default CollapsibleIcon;

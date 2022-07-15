@@ -1,7 +1,7 @@
 import type {FC, ReactNode} from 'react';
 import {useEffect, useRef, Children} from 'react';
 
-export const InfiniteCarousel: FC<{children?: ReactNode}> = ({children}) => {
+const InfiniteCarousel: FC<{children?: ReactNode}> = ({children}) => {
   const moverRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
@@ -34,3 +34,5 @@ export const InfiniteCarousel: FC<{children?: ReactNode}> = ({children}) => {
     </div>
   );
 };
+
+export default InfiniteCarousel;

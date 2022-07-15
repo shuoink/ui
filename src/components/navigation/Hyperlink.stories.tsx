@@ -1,5 +1,5 @@
 import type {FC} from 'react';
-import {Hyperlink as Link} from './Hyperlink.js';
+import Link from './Hyperlink.js';
 
 const meta = {
   title: 'Base/Navigation/Hyperlink',

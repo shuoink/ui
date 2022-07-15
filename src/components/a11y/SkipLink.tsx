@@ -7,7 +7,7 @@ type Props = {
   children?: ReactNode;
 };
 
-export const SkipLink: FC<Props> = ({href, children = 'Skip to Content'}) => {
+const SkipLink: FC<Props> = ({href, children = 'Skip to Content'}) => {
   if (!isValidHashHref(href)) {
     throw new Error('Hash link href is invalid!');
   }
@@ -20,3 +20,5 @@ export const SkipLink: FC<Props> = ({href, children = 'Skip to Content'}) => {
     </a>
   );
 };
+
+export default SkipLink;

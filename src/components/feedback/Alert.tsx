@@ -4,7 +4,7 @@ import type {FC, ReactNode} from 'react';
 
 const clsx = defaultImport(_clsx);
 
-export const Alert: FC<{
+const Alert: FC<{
   type?: 'danger' | 'error' | 'info' | 'success' | 'warning';
   children?: ReactNode;
 }> = ({type = 'info', children}) => (
@@ -30,3 +30,5 @@ export const Alert: FC<{
     {children}
   </div>
 );
+
+export default Alert;

@@ -1,8 +1,8 @@
 import type {FC} from 'react';
 import type {HeadingLevel} from '../../_internal/contexts/HeadingLevelContext.js';
-import {IncrementHeadingLevel} from '../utils/IncrementHeadingLevel.js';
+import IncrementHeadingLevel from '../utils/IncrementHeadingLevel.js';
 
-export const Section: FC<
+const Section: FC<
   JSX.IntrinsicElements['section'] & {
     level?: HeadingLevel;
   }
@@ -13,3 +13,5 @@ export const Section: FC<
     </IncrementHeadingLevel>
   );
 };
+
+export default Section;

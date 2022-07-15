@@ -1,7 +1,7 @@
 import type {FC} from 'react';
 import {useContext} from 'react';
 import {HeadingLevelContext} from '../../_internal/contexts/HeadingLevelContext.js';
-import {IncrementHeadingLevel as Component} from './IncrementHeadingLevel.js';
+import Component from './IncrementHeadingLevel.js';
 
 const meta = {
   title: 'Base/Utils/IncrementHeadingLevel',

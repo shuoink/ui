@@ -1,5 +1,5 @@
 import type {FC} from 'react';
-import {ButtonLink as ButtonLinkComponent} from './ButtonLink.js';
+import ButtonLinkComponent from './ButtonLink.js';
 
 const meta = {
   title: 'Base/Navigation/ButtonLink',

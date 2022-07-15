@@ -1,6 +1,6 @@
 import type {FC} from 'react';
 import type {TextDescriptor} from './TextConversation.js';
-import {TextConversation, TextMessage} from './TextConversation.js';
+import TextConversation, {TextMessage} from './TextConversation.js';
 
 const meta = {
   title: 'Base/Media/TextConversation',

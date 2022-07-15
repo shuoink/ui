@@ -1,6 +1,6 @@
 import {forwardRef} from 'react';
 
-export const IconLink = forwardRef<
+const IconLink = forwardRef<
   HTMLAnchorElement,
   JSX.IntrinsicElements['a'] & {href: string; title: string}
 >(({children, ...rest}, ref) => (
@@ -15,3 +15,5 @@ export const IconLink = forwardRef<
 ));
 
 IconLink.displayName = 'IconLink';
+
+export default IconLink;

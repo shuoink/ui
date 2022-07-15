@@ -4,7 +4,7 @@ import type {FC} from 'react';
 
 const clsx = defaultImport(_clsx);
 
-export const Label: FC<
+const Label: FC<
   JSX.IntrinsicElements['label'] & {
     display?: 'block' | 'inline';
   }
@@ -23,3 +23,5 @@ export const Label: FC<
     </label>
   );
 };
+
+export default Label;

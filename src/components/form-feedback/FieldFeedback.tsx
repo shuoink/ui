@@ -7,7 +7,7 @@ import type {FieldMeta} from '../../_internal/utils/types.js';
 
 const clsx = defaultImport(_clsx);
 
-export const FieldFeedback: FC<FieldMeta> = ({
+const FieldFeedback: FC<FieldMeta> = ({
   displayName,
   touched,
   valid,
@@ -31,3 +31,5 @@ export const FieldFeedback: FC<FieldMeta> = ({
     </div>
   );
 };
+
+export default FieldFeedback;

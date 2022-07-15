@@ -1,8 +1,8 @@
 import type {ReactElement, FC} from 'react';
 import {cloneElement} from 'react';
 import type {FieldMeta} from '../../_internal/utils/types.js';
-import {FieldFeedback} from '../form-feedback/FieldFeedback.js';
-import {Label} from './Label.js';
+import FieldFeedback from '../form-feedback/FieldFeedback.js';
+import Label from './Label.js';
 
 type FieldGroupProps = {
   label: string;
@@ -11,12 +11,7 @@ type FieldGroupProps = {
   children: ReactElement<{meta?: FieldMeta}>;
 };
 
-export const FieldGroup: FC<FieldGroupProps> = ({
-  children,
-  meta,
-  label,
-  labelFor,
-}) => {
+const FieldGroup: FC<FieldGroupProps> = ({children, meta, label, labelFor}) => {
   return (
     <div>
       <Label htmlFor={labelFor}>{label}</Label>
@@ -34,3 +29,5 @@ export const FieldGroup: FC<FieldGroupProps> = ({
     </div>
   );
 };
+
+export default FieldGroup;

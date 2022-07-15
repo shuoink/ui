@@ -1,8 +1,8 @@
 import type {FC, ReactNode} from 'react';
 import {Children, cloneElement, isValidElement, useState} from 'react';
-import {AccordionSection} from './AccordionSection.js';
+import AccordionSection from './AccordionSection.js';
 
-export const Accordion: FC<{children?: ReactNode}> = ({children}) => {
+const Accordion: FC<{children?: ReactNode}> = ({children}) => {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
   const childArray = Children.toArray(children);
   return (
@@ -26,3 +26,5 @@ export const Accordion: FC<{children?: ReactNode}> = ({children}) => {
     </>
   );
 };
+
+export default Accordion;

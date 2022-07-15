@@ -1,5 +1,5 @@
 import type {FC} from 'react';
-import {Heading} from './Heading.js';
+import Heading from './Heading.js';
 
 const meta = {
   title: 'Base/Typography/Heading',

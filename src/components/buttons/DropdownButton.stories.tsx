@@ -1,5 +1,5 @@
 import type {FC} from 'react';
-import {DropdownButton as DropdownButtonComponent} from './DropdownButton.js';
+import DropdownButtonComponent from './DropdownButton.js';
 
 const meta = {
   title: 'Base/Buttons/DropdownButton',

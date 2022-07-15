@@ -1,7 +1,7 @@
 import type {FC} from 'react';
 import {MdClose} from 'react-icons/md/index.js';
-import {Button} from './Button.js';
-import {TabButtonGroup as Component} from './TabButtonGroup.js';
+import Button from './Button.js';
+import Component from './TabButtonGroup.js';
 
 const meta = {
   title: 'Base/Buttons/TabButtonGroup',

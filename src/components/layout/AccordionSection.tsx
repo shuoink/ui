@@ -2,15 +2,15 @@ import _clsx from 'clsx';
 import {defaultImport} from 'default-import';
 import type {FC, ReactNode} from 'react';
 import {useToggle} from '../../_internal/hooks/useToggle.js';
-import {Button} from '../buttons/Button.js';
-import {CollapsibleIcon} from '../icons/CollapsibleIcon.js';
-import {Heading} from '../typography/Heading.js';
+import Button from '../buttons/Button.js';
+import CollapsibleIcon from '../icons/CollapsibleIcon.js';
+import Heading from '../typography/Heading.js';
 import type {DockConfig} from '../../_internal/utils/dock.js';
-import {Collapsible} from './Collapsible.js';
+import Collapsible from './Collapsible.js';
 
 const clsx = defaultImport(_clsx);
 
-export const AccordionSection: FC<{
+const AccordionSection: FC<{
   heading: ReactNode;
   isOpen?: boolean;
   dock?: DockConfig;
@@ -40,3 +40,5 @@ export const AccordionSection: FC<{
     </>
   );
 };
+
+export default AccordionSection;

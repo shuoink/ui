@@ -1,7 +1,7 @@
 import type {FC} from 'react';
 import {useToggle} from '../../_internal/hooks/useToggle.js';
-import {Button} from '../buttons/Button.js';
-import {Dropdown as Component} from './Dropdown.js';
+import Button from '../buttons/Button.js';
+import Component from './Dropdown.js';
 
 const meta = {
   title: 'Base/Overlays/Dropdown',

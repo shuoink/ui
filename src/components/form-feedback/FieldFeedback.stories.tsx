@@ -1,6 +1,6 @@
 import type {FC} from 'react';
-import {TextInput} from '../form-controls/TextInput.js';
-import {FieldFeedback as FieldFeedbackComponent} from './FieldFeedback.js';
+import TextInput from '../form-controls/TextInput.js';
+import FieldFeedbackComponent from './FieldFeedback.js';
 
 const meta = {
   title: 'Base/Forms/Feedback/Field Feedback',

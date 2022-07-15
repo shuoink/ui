@@ -1,9 +1,9 @@
 import type {FC, ReactNode} from 'react';
 import {useEffect} from 'react';
 import {MdClose} from 'react-icons/md/index.js';
-import {Backdrop} from './Backdrop.js';
+import Backdrop from './Backdrop.js';
 
-export const Dialog: FC<{
+const Dialog: FC<{
   header?: ReactNode;
   footer?: ReactNode;
   close: () => void;
@@ -40,3 +40,5 @@ export const Dialog: FC<{
     </>
   );
 };
+
+export default Dialog;

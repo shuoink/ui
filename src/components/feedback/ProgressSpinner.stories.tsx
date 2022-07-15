@@ -1,5 +1,5 @@
 import type {FC} from 'react';
-import {ProgressSpinner as Component} from './ProgressSpinner.js';
+import Component from './ProgressSpinner.js';
 
 const meta = {
   title: 'Base/Feedback/Progress Spinner',

@@ -1,7 +1,7 @@
 import type {FC, ReactNode} from 'react';
 import {useRef, useLayoutEffect} from 'react';
 
-export const Collapsible: FC<{isOpen?: boolean; children?: ReactNode}> = ({
+const Collapsible: FC<{isOpen?: boolean; children?: ReactNode}> = ({
   children,
   isOpen,
 }) => {
@@ -25,3 +25,5 @@ export const Collapsible: FC<{isOpen?: boolean; children?: ReactNode}> = ({
     </div>
   );
 };
+
+export default Collapsible;

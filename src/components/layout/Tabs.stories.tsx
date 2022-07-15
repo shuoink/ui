@@ -1,10 +1,10 @@
 import type {FC} from 'react';
 import {MdAddToPhotos, MdClose} from 'react-icons/md/index.js';
-import {TabButton} from '../buttons/TabButton.js';
-import {Button} from '../buttons/Button.js';
-import {TabLink} from '../navigation/TabLink.js';
-import {TabButtonGroup} from '../buttons/TabButtonGroup.js';
-import {Tabs as Component} from './Tabs.js';
+import TabButton from '../buttons/TabButton.js';
+import Button from '../buttons/Button.js';
+import TabLink from '../navigation/TabLink.js';
+import TabButtonGroup from '../buttons/TabButtonGroup.js';
+import Component from './Tabs.js';
 
 const meta = {
   title: 'Base/Layout/Tabs',

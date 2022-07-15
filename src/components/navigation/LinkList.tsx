@@ -1,7 +1,7 @@
 import type {FC, ReactNode} from 'react';
 import {isValidElement, Children} from 'react';
 
-export const LinkList: FC<{heading?: ReactNode; children?: ReactNode}> = ({
+const LinkList: FC<{heading?: ReactNode; children?: ReactNode}> = ({
   heading,
   children,
 }) => {
@@ -21,3 +21,5 @@ export const LinkList: FC<{heading?: ReactNode; children?: ReactNode}> = ({
     </div>
   );
 };
+
+export default LinkList;

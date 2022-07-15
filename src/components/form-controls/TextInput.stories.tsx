@@ -1,5 +1,5 @@
 import type {FC} from 'react';
-import {TextInput as Component} from './TextInput.js';
+import Component from './TextInput.js';
 
 const meta = {
   title: 'Base/Forms/Controls/Text Input',

@@ -8,7 +8,7 @@ import type {
 import {useState} from 'react';
 import {usePopper} from 'react-popper';
 import type {Options} from '@popperjs/core';
-import {Backdrop} from './Backdrop.js';
+import Backdrop from './Backdrop.js';
 
 type Props = {
   isOpen?: boolean;
@@ -22,7 +22,7 @@ type Props = {
   children?: ReactNode;
 };
 
-export const Dropdown: FC<Props> = ({
+const Dropdown: FC<Props> = ({
   placement = 'bottom-start',
   isOpen,
   close,
@@ -46,3 +46,5 @@ export const Dropdown: FC<Props> = ({
     </div>
   );
 };
+
+export default Dropdown;

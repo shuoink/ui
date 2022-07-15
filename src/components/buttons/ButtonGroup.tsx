@@ -2,7 +2,7 @@ import type {ComponentProps, ReactElement, ReactNode, FC} from 'react';
 import {cloneElement, isValidElement, Children} from 'react';
 import type {DockConfig} from '../../_internal/utils/dock.js';
 import {mergeDockConfigs} from '../../_internal/utils/dock.js';
-import {Button} from './Button.js';
+import Button from './Button.js';
 
 type ButtonElement = ReactElement<ComponentProps<typeof Button>, typeof Button>;
 
@@ -14,7 +14,7 @@ type Props = {
 const isButton = (child: ReactNode): child is ButtonElement =>
   isValidElement(child) && child.type === Button;
 
-export const ButtonGroup: FC<Props> = ({dock, children}) => {
+const ButtonGroup: FC<Props> = ({dock, children}) => {
   const buttons = Children.toArray(children).filter(isButton);
   return (
     <div className="flex">
@@ -31,3 +31,5 @@ export const ButtonGroup: FC<Props> = ({dock, children}) => {
     </div>
   );
 };
+
+export default ButtonGroup;

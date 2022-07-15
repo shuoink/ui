@@ -7,7 +7,7 @@ import {HeadingLevelContext} from '../../_internal/contexts/HeadingLevelContext.
 
 const clsx = defaultImport(_clsx);
 
-export const Heading: FC<
+const Heading: FC<
   JSX.IntrinsicElements['h1'] & {
     level?: HeadingLevel;
   }
@@ -33,3 +33,5 @@ export const Heading: FC<
     </Tag>
   );
 };
+
+export default Heading;

@@ -1,9 +1,9 @@
 import type {ComponentProps, FC, ReactNode} from 'react';
-import {ExitContext} from '../../_internal/contexts/ExitContext.js';
+import ExitContext from '../../_internal/contexts/ExitContext.js';
 import {useToggle} from '../../_internal/hooks/useToggle.js';
-import {CollapsibleIcon} from '../icons/CollapsibleIcon.js';
-import {Dropdown} from '../overlays/Dropdown.js';
-import {Button} from './Button.js';
+import CollapsibleIcon from '../icons/CollapsibleIcon.js';
+import Dropdown from '../overlays/Dropdown.js';
+import Button from './Button.js';
 
 type Props = ComponentProps<typeof Button> &
   Omit<
@@ -13,7 +13,7 @@ type Props = ComponentProps<typeof Button> &
     label: ReactNode;
   };
 
-export const DropdownButton: FC<Props> = ({
+const DropdownButton: FC<Props> = ({
   placement,
   children,
   label,
@@ -35,3 +35,5 @@ export const DropdownButton: FC<Props> = ({
     </Dropdown>
   );
 };
+
+export default DropdownButton;

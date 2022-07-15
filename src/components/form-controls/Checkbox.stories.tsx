@@ -1,5 +1,5 @@
 import type {FC} from 'react';
-import {Checkbox as Component} from './Checkbox.js';
+import Component from './Checkbox.js';
 
 const meta = {
   title: 'Base/Forms/Controls/Checkbox',

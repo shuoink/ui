@@ -1,6 +1,6 @@
 import type {FC} from 'react';
-import {MasonryGrid as Component} from './MasonryGrid.js';
-import {Card} from './Card.js';
+import Component from './MasonryGrid.js';
+import Card from './Card.js';
 
 const meta = {
   title: 'Base/Layout/Masonry Grid',

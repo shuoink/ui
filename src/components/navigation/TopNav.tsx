@@ -1,8 +1,8 @@
 import type {Dispatch, ReactNode, SetStateAction, FC} from 'react';
 import {useRef, useCallback, useState} from 'react';
 import {usePopper} from 'react-popper';
-import {ExitContext} from '../../_internal/contexts/ExitContext.js';
-import {useCloseOnClickOutside} from '../../_internal/hooks/useCloseOnClickOutside.js';
+import ExitContext from '../../_internal/contexts/ExitContext.js';
+import useCloseOnClickOutside from '../../_internal/hooks/useCloseOnClickOutside.js';
 
 export type Menu = {id: number | string; label: ReactNode; children: ReactNode};
 
@@ -73,7 +73,7 @@ const TopNavMenu: FC<
   );
 };
 
-export const TopNav: FC<Props> = ({menus}) => {
+const TopNav: FC<Props> = ({menus}) => {
   const ref = useRef<HTMLElement | null>(null);
   const [activeMenu, setActiveMenu] = useState<Menu['id'] | null>(null);
   const close = useCallback(() => setActiveMenu(null), [setActiveMenu]);
@@ -100,3 +100,5 @@ export const TopNav: FC<Props> = ({menus}) => {
   }
   return nav;
 };
+
+export default TopNav;

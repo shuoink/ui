@@ -1,5 +1,5 @@
 import type {FC} from 'react';
-import {Copyright as Component} from './Copyright.js';
+import Component from './Copyright.js';
 
 const meta = {
   title: 'Base/Utils/Copyright',

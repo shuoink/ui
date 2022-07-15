@@ -1,6 +1,6 @@
 import type {FC} from 'react';
-import {Heading} from '../typography/Heading.js';
-import {Section} from './Section.js';
+import Heading from '../typography/Heading.js';
+import Section from './Section.js';
 
 const meta = {
   title: 'Base/Layout/Section',

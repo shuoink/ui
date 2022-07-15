@@ -5,7 +5,7 @@ import {defaultImport} from 'default-import';
 
 const clsx = defaultImport(_clsx);
 
-export const ProgressSpinner: FC<{progress: number; grow?: boolean}> = ({
+const ProgressSpinner: FC<{progress: number; grow?: boolean}> = ({
   progress,
   grow,
 }) => {
@@ -49,3 +49,5 @@ export const ProgressSpinner: FC<{progress: number; grow?: boolean}> = ({
     </div>
   );
 };
+
+export default ProgressSpinner;

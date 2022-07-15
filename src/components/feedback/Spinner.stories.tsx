@@ -1,5 +1,5 @@
 import type {FC} from 'react';
-import {Spinner as Component} from './Spinner.js';
+import Component from './Spinner.js';
 
 const meta = {
   title: 'Base/Feedback/Spinner',

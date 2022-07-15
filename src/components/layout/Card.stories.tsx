@@ -1,5 +1,5 @@
 import type {FC} from 'react';
-import {Card as Component} from './Card.js';
+import Component from './Card.js';
 
 const meta = {
   title: 'Base/Layout/Card',

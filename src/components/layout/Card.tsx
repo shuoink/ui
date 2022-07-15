@@ -1,11 +1,11 @@
 import type {FC, ReactNode} from 'react';
 import _clsx from 'clsx';
 import {defaultImport} from 'default-import';
-import {IncrementHeadingLevel} from '../utils/IncrementHeadingLevel.js';
+import IncrementHeadingLevel from '../utils/IncrementHeadingLevel.js';
 
 const clsx = defaultImport(_clsx);
 
-export const Card: FC<{
+const Card: FC<{
   grow?: boolean;
   children?: ReactNode;
 }> = ({grow, children}) => {
@@ -22,3 +22,5 @@ export const Card: FC<{
     </IncrementHeadingLevel>
   );
 };
+
+export default Card;

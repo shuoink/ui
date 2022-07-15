@@ -1,7 +1,7 @@
 import type {FC} from 'react';
 import {noop} from '../../_internal/utils/noop.js';
-import {Heading} from '../typography/Heading.js';
-import {Dialog as Component} from './Dialog.js';
+import Heading from '../typography/Heading.js';
+import Component from './Dialog.js';
 
 const meta = {
   title: 'Base/Overlays/Dialog',

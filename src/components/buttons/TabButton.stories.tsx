@@ -1,6 +1,6 @@
 import type {FC} from 'react';
 import {MdBrowserNotSupported} from 'react-icons/md/index.js';
-import {TabButton as Component} from './TabButton.js';
+import Component from './TabButton.js';
 
 const meta = {
   title: 'Base/Buttons/TabButton',

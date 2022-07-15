@@ -5,7 +5,7 @@ import {useLayoutEffect, useState} from 'react';
 
 const clsx = defaultImport(_clsx);
 
-export const Backdrop: FC<{
+const Backdrop: FC<{
   dark?: boolean;
   opaque?: boolean;
   close?: () => void;
@@ -34,3 +34,5 @@ export const Backdrop: FC<{
     />
   );
 };
+
+export default Backdrop;

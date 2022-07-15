@@ -1,6 +1,6 @@
 import type {FC} from 'react';
-import {ButtonGroup as Component} from './ButtonGroup.js';
-import {Button} from './Button.js';
+import Component from './ButtonGroup.js';
+import Button from './Button.js';
 
 const meta = {
   title: 'Base/Buttons/ButtonGroup',

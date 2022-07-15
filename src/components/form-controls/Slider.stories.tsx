@@ -1,5 +1,5 @@
 import type {FC} from 'react';
-import {Slider as Component} from './Slider.js';
+import Component from './Slider.js';
 
 const meta = {
   title: 'Base/Forms/Controls/Slider',

@@ -1,6 +1,6 @@
 import type {FC} from 'react';
 import type {Menu} from './TopNav.js';
-import {TopNav as Component} from './TopNav.js';
+import Component from './TopNav.js';
 
 const meta = {
   title: 'Base/Navigation/TopNav',

@@ -1,5 +1,5 @@
 import type {FC} from 'react';
-import {Radio as Component} from './Radio.js';
+import Component from './Radio.js';
 
 const meta = {
   title: 'Base/Forms/Controls/Radio',

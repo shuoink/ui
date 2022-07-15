@@ -2,7 +2,7 @@ import type {FC} from 'react';
 import {getHyperlinkClasses} from '../../_internal/utils/getHyperlinkClasses.js';
 import {isAbsoluteUrl} from '../../_internal/utils/isAbsoluteUrl.js';
 
-export const Hyperlink: FC<JSX.IntrinsicElements['a'] & {gray?: boolean}> = ({
+const Hyperlink: FC<JSX.IntrinsicElements['a'] & {gray?: boolean}> = ({
   gray,
   href,
   children,
@@ -29,3 +29,5 @@ export const Hyperlink: FC<JSX.IntrinsicElements['a'] & {gray?: boolean}> = ({
     </a>
   );
 };
+
+export default Hyperlink;

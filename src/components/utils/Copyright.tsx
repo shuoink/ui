@@ -1,9 +1,6 @@
 import type {FC} from 'react';
 
-export const Copyright: FC<{holder: string; start: number}> = ({
-  holder,
-  start,
-}) => {
+const Copyright: FC<{holder: string; start: number}> = ({holder, start}) => {
   const current = new Date().getFullYear();
   return (
     <>
@@ -11,3 +8,5 @@ export const Copyright: FC<{holder: string; start: number}> = ({
     </>
   );
 };
+
+export default Copyright;

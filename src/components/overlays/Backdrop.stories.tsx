@@ -1,7 +1,7 @@
 import type {FC} from 'react';
 import {useToggle} from '../../_internal/hooks/useToggle.js';
-import {Button} from '../buttons/Button.js';
-import {Backdrop as Component} from './Backdrop.js';
+import Button from '../buttons/Button.js';
+import Component from './Backdrop.js';
 
 const meta = {
   title: 'Base/Overlays/Backdrop',

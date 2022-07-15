@@ -1,5 +1,5 @@
 import type {FC} from 'react';
-import {Label as LabelComponent} from './Label.js';
+import LabelComponent from './Label.js';
 
 const meta = {
   title: 'Base/Forms/Layout/Label',

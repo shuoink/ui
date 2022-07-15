@@ -1,5 +1,5 @@
 import type {FC} from 'react';
-import {SkipLink as SkipLinkComponent} from './SkipLink.js';
+import SkipLinkComponent from './SkipLink.js';
 
 const meta = {
   title: 'Base/A11y/SkipLink',

@@ -2,7 +2,7 @@ import type {ReactNode, FC} from 'react';
 import {useId} from 'react';
 import type {FieldMeta} from '../../_internal/utils/types.js';
 
-export const Slider: FC<
+const Slider: FC<
   JSX.IntrinsicElements['input'] & {
     meta?: FieldMeta;
     children?: ReactNode;
@@ -16,3 +16,5 @@ export const Slider: FC<
     </>
   );
 };
+
+export default Slider;

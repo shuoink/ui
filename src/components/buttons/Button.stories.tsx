@@ -1,5 +1,5 @@
 import type {FC} from 'react';
-import {Button as Component} from './Button.js';
+import Component from './Button.js';
 
 const meta = {
   title: 'Base/Buttons/Button',

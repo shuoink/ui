@@ -1,7 +1,7 @@
 import type {FC} from 'react';
 import {useToggle} from '../../_internal/hooks/useToggle.js';
-import {Button} from '../buttons/Button.js';
-import {CollapsibleIcon as Component} from './CollapsibleIcon.js';
+import Button from '../buttons/Button.js';
+import Component from './CollapsibleIcon.js';
 
 const meta = {
   title: 'Base/Icons/Collapsible Icon',

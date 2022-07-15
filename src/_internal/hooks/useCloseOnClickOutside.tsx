@@ -1,7 +1,7 @@
 import {useEffect} from 'react';
 import type {MutableRefObject} from 'react';
 
-export const useCloseOnClickOutside = (
+const useCloseOnClickOutside = (
   isOpen: boolean,
   close: () => void,
   containerRef: MutableRefObject<HTMLElement | null>,
@@ -25,3 +25,5 @@ export const useCloseOnClickOutside = (
     }
   }, [isOpen, close, containerRef]);
 };
+
+export default useCloseOnClickOutside;

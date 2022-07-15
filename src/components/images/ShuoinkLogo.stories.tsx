@@ -1,5 +1,5 @@
 import type {FC} from 'react';
-import {ShuoinkLogo} from './ShuoinkLogo.js';
+import ShuoinkLogo from './ShuoinkLogo.js';
 
 const meta = {
   title: 'Base/Images/Shuoink Logo',

@@ -10,7 +10,7 @@ type Props = JSX.IntrinsicElements['input'] & {
   valid?: boolean;
 };
 
-export const Switch = forwardRef<HTMLInputElement, Props>(
+const Switch = forwardRef<HTMLInputElement, Props>(
   ({vertical, inline, valid, ...rest}, ref) => (
     <div
       className={clsx(
@@ -67,3 +67,5 @@ export const Switch = forwardRef<HTMLInputElement, Props>(
 );
 
 Switch.displayName = 'Switch';
+
+export default Switch;

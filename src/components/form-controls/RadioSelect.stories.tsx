@@ -1,5 +1,5 @@
 import type {FC} from 'react';
-import {RadioSelect as Component} from './RadioSelect.js';
+import Component from './RadioSelect.js';
 
 const meta = {
   title: 'Base/Forms/Controls/RadioSelect',

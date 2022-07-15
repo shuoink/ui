@@ -1,5 +1,9 @@
 import {createContext} from 'react';
 
-export const ExitContext = createContext(() => {
-  // noop
-});
+const noop = () => {
+  // nothing
+};
+
+const ExitContext = createContext(noop);
+
+export default ExitContext;

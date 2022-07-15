@@ -3,7 +3,7 @@ import {MdExpandMore} from 'react-icons/md/index.js';
 import type {FieldMeta, Unstyled} from '../../_internal/utils/types.js';
 import {getFieldClasses} from '../../_internal/utils/getFieldClasses.js';
 
-export const Select: FC<Unstyled<'select'> & {meta?: FieldMeta}> = ({
+const Select: FC<Unstyled<'select'> & {meta?: FieldMeta}> = ({
   meta,
   ...props
 }) => (
@@ -18,3 +18,5 @@ export const Select: FC<Unstyled<'select'> & {meta?: FieldMeta}> = ({
     </div>
   </div>
 );
+
+export default Select;

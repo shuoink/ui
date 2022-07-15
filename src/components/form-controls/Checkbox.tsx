@@ -2,7 +2,7 @@ import type {FC} from 'react';
 import type {FieldMeta} from '../../_internal/utils/types.js';
 import {getFieldClasses} from '../../_internal/utils/getFieldClasses.js';
 
-export const Checkbox: FC<
+const Checkbox: FC<
   JSX.IntrinsicElements['input'] & {
     meta?: Omit<FieldMeta, 'dock' | 'isCheckbox' | 'isRadio'>;
   }
@@ -14,3 +14,5 @@ export const Checkbox: FC<
     className={getFieldClasses({...meta, block: false, isCheckbox: true})}
   />
 );
+
+export default Checkbox;

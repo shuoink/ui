@@ -1,5 +1,5 @@
 import type {FC} from 'react';
-import {Polaroid as Component} from './Polaroid.js';
+import Component from './Polaroid.js';
 
 const meta = {
   title: 'Base/Media/Polaroid',

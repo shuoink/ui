@@ -1,5 +1,5 @@
 import type {FC} from 'react';
-import {Disclaimer as Component} from './Disclaimer.js';
+import Component from './Disclaimer.js';
 
 const meta = {
   title: 'Base/Typography/Disclaimer',

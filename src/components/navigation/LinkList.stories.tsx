@@ -1,6 +1,6 @@
 import type {FC} from 'react';
-import {LinkList as Component} from './LinkList.js';
-import {Hyperlink} from './Hyperlink.js';
+import Component from './LinkList.js';
+import Hyperlink from './Hyperlink.js';
 
 const meta = {
   title: 'Base/Navigation/Link List',

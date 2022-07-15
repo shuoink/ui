@@ -1,6 +1,6 @@
 import type {FC} from 'react';
 
-export const ShuoinkLogo: FC<JSX.IntrinsicElements['svg']> = props => (
+const ShuoinkLogo: FC<JSX.IntrinsicElements['svg']> = props => (
   <svg
     viewBox="0 0 530 180"
     strokeWidth="1"
@@ -41,3 +41,5 @@ export const ShuoinkLogo: FC<JSX.IntrinsicElements['svg']> = props => (
     <path d="M460,30 L480,30 L480,80 L490,80 L490,70 L500,70 L500,60 L520,60 L520,80 L510,80 L510,90 L500,90 L500,100 L510,100 L510,110 L520,110 L520,130 L500,130 L500,120 L490,120 L490,100 L480,100 L480,130 L460,130 L460,30" />
   </svg>
 );
+
+export default ShuoinkLogo;

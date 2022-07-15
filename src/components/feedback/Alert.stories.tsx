@@ -1,5 +1,5 @@
 import type {FC} from 'react';
-import {Alert as AlertComponent} from './Alert.js';
+import AlertComponent from './Alert.js';
 
 const meta = {
   title: 'Base/Feedback/Alert',

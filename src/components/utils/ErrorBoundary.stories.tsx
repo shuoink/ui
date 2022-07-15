@@ -1,5 +1,5 @@
 import type {FC} from 'react';
-import {ErrorBoundary as Component} from './ErrorBoundary.js';
+import Component from './ErrorBoundary.js';
 
 const meta = {
   title: 'Base/Utils/ErrorBoundary',

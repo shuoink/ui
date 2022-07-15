@@ -1,5 +1,5 @@
 import type {FC} from 'react';
-import {AccordionSection as Component} from './AccordionSection.js';
+import Component from './AccordionSection.js';
 
 const meta = {
   title: 'Base/Layout/Accordion Section',

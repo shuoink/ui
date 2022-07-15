@@ -12,7 +12,7 @@ type StyleData = {
 type Props = StyleableProps<JSX.IntrinsicElements['button'], StyleData> &
   StyleData & {remove?: () => void};
 
-export const Button = forwardRef<HTMLButtonElement, Props>(
+const Button = forwardRef<HTMLButtonElement, Props>(
   (
     {
       type = 'button',
@@ -42,3 +42,5 @@ export const Button = forwardRef<HTMLButtonElement, Props>(
     );
   },
 );
+
+export default Button;

@@ -82,7 +82,7 @@ export const TextMessage: FC<{from: 'me' | 'them'; children?: ReactNode}> = ({
   );
 };
 
-export const TextConversation: FC<{
+const TextConversation: FC<{
   texts: Array<TextDescriptor>;
   onComplete?: () => void;
 }> = ({texts: messages, onComplete}) => {
@@ -136,3 +136,5 @@ export const TextConversation: FC<{
     </div>
   );
 };
+
+export default TextConversation;

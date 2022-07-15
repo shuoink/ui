@@ -1,7 +1,7 @@
 import type {FC, ReactNode} from 'react';
 import {Children} from 'react';
 
-export const MasonryGrid: FC<{children?: ReactNode}> = ({children}) => {
+const MasonryGrid: FC<{children?: ReactNode}> = ({children}) => {
   const items = Children.toArray(children);
   const columns = 3; // TODO: detect this dynamically. also set the cols dynamically. use matchMedia?
   return (
@@ -15,3 +15,5 @@ export const MasonryGrid: FC<{children?: ReactNode}> = ({children}) => {
     </div>
   );
 };
+
+export default MasonryGrid;

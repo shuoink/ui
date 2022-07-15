@@ -1,6 +1,6 @@
 import type {FC} from 'react';
-import {TextInput} from '../form-controls/TextInput.js';
-import {FieldGroup as Component} from './FieldGroup.js';
+import TextInput from '../form-controls/TextInput.js';
+import Component from './FieldGroup.js';
 
 const meta = {
   title: 'Base/Forms/Layout/Field Group',

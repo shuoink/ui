@@ -5,10 +5,7 @@ import {defaultImport} from 'default-import';
 
 const clsx = defaultImport(_clsx);
 
-export const Spinner: FC<{grow?: boolean; delay?: number}> = ({
-  grow,
-  delay = 100,
-}) => {
+const Spinner: FC<{grow?: boolean; delay?: number}> = ({grow, delay = 100}) => {
   const [shouldShow, setShouldShow] = useState(delay === 0);
 
   useEffect(() => {
@@ -81,3 +78,5 @@ export const Spinner: FC<{grow?: boolean; delay?: number}> = ({
     </div>
   );
 };
+
+export default Spinner;

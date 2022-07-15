@@ -1,13 +1,13 @@
 import type {ChangeEvent, FC, ReactNode} from 'react';
 import {Children} from 'react';
 import type {FieldMeta} from '../../_internal/utils/types.js';
-import {Label} from '../form-layout/Label.js';
+import Label from '../form-layout/Label.js';
 import {getOptionLabel} from '../../_internal/utils/getOptionLabel.js';
 import {getOptionValue} from '../../_internal/utils/getOptionValue.js';
 import {isOptionElement} from '../../_internal/utils/isOptionElement.js';
-import {Radio} from './Radio.js';
+import Radio from './Radio.js';
 
-export const RadioSelect: FC<{
+const RadioSelect: FC<{
   name: string;
   value?: string;
   defaultValue?: string;
@@ -41,3 +41,5 @@ export const RadioSelect: FC<{
     </div>
   );
 };
+
+export default RadioSelect;

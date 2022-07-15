@@ -1,6 +1,6 @@
 import type {FC} from 'react';
-import {ShuoinkLogo} from '../images/ShuoinkLogo.js';
-import {InfiniteCarousel as Component} from './InfiniteCarousel.js';
+import ShuoinkLogo from '../images/ShuoinkLogo.js';
+import Component from './InfiniteCarousel.js';
 
 const meta = {
   title: 'Base/Media/Infinite Carousel',
