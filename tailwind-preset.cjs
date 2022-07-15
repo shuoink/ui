@@ -7,7 +7,11 @@ const colors = require('tailwindcss/colors.js');
  */
 module.exports = ({content = []} = {}) => ({
   mode: 'jit',
-  content: ['./src/**/*.{js,cjs,mjs,jsx,ts,tsx,mts,cts}', ...content],
+  content: [
+    // eslint-disable-next-line node/no-path-concat -- glob
+    `${__dirname}/dist/**/*.{js,cjs,mjs,jsx,ts,tsx,mts,cts}`,
+    ...content,
+  ],
   darkMode: 'class',
   theme: {
     extend: {

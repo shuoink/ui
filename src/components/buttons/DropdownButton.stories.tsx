@@ -16,12 +16,12 @@ export const DropdownButton: FC = () => (
   <div className="flex flex-wrap gap-2">
     <DropdownButtonComponent
       label="Dropdown Button (bottom-left)"
-      placement="left-start"
+      placement="left-end"
     >
       {menu}
     </DropdownButtonComponent>
     <DropdownButtonComponent
-      label="Dropdown Button (right-end)"
+      label="Dropdown Button (bottom-right)"
       placement="right-end"
     >
       {menu}

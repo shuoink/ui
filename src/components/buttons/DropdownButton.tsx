@@ -24,7 +24,7 @@ const DropdownButton: FC<Props> = ({
     <Dropdown
       isOpen={isOpen}
       close={close}
-      renderTrigger={ref => (
+      renderTrigger={({ref}) => (
         <Button ref={ref as any} {...buttonProps} onClick={toggle}>
           {label} <CollapsibleIcon isOpen={isOpen} />
         </Button>

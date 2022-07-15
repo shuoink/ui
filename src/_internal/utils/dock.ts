@@ -1,8 +1,8 @@
-import pushpop from '@spudly/pushpop';
+import * as pushpop from '@spudly/pushpop';
 import _clsx from 'clsx';
 import {defaultImport} from 'default-import';
 
-const {isNotNil, unique} = pushpop;
+const {isNotNil, unique} = defaultImport(pushpop);
 
 const clsx = defaultImport(_clsx);
 
