@@ -8,4 +8,5 @@ ignores:
     'postcss-import',
     'depcheck',
     'jest-environment-jsdom',
+    'semantic-release',
   ]
