@@ -2,16 +2,16 @@ import type {FC} from 'react';
 import {getHyperlinkClasses} from '../../_internal/utils/getHyperlinkClasses.js';
 import {isAbsoluteUrl} from '../../_internal/utils/isAbsoluteUrl.js';
 
-const Hyperlink: FC<JSX.IntrinsicElements['a'] & {gray?: boolean}> = ({
-  gray,
-  href,
-  children,
-  ...rest
-}) => {
+const Hyperlink: FC<
+  JSX.IntrinsicElements['a'] & {
+    gray?: boolean;
+    render?: FC<JSX.IntrinsicElements['a']> | 'a';
+  }
+> = ({gray, href, children, render: Anchor = 'a', ...rest}) => {
   const className = getHyperlinkClasses({gray});
   if (href && isAbsoluteUrl(href)) {
     return (
-      <a
+      <Anchor
         {...rest}
         href={href}
         target="_blank"
@@ -19,7 +19,7 @@ const Hyperlink: FC<JSX.IntrinsicElements['a'] & {gray?: boolean}> = ({
         className={className}
       >
         {children}
-      </a>
+      </Anchor>
     );
   }
 
