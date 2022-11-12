@@ -1,14 +1,15 @@
-import type {FC} from 'react';
+import {forwardRef} from 'react';
 import {MdExpandMore} from 'react-icons/md/index.js';
 import type {FieldMeta, Unstyled} from '../../_internal/utils/types.js';
 import {getFieldClasses} from '../../_internal/utils/getFieldClasses.js';
 
-const Select: FC<Unstyled<'select'> & {meta?: FieldMeta}> = ({
-  meta,
-  ...props
-}) => (
+const Select = forwardRef<
+  HTMLSelectElement,
+  Unstyled<'select'> & {meta?: FieldMeta}
+>(({meta, ...props}, ref) => (
   <div className="relative isolate">
     <select
+      ref={ref}
       {...props}
       // className="block appearance-none w-full bg-white border border-gray-400 hover:border-gray-500 px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:ring"
       className={getFieldClasses(meta)}
@@ -17,6 +18,6 @@ const Select: FC<Unstyled<'select'> & {meta?: FieldMeta}> = ({
       <MdExpandMore />
     </div>
   </div>
-);
+));
 
 export default Select;

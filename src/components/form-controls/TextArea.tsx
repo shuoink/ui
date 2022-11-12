@@ -1,10 +1,12 @@
-import type {FC} from 'react';
+import {forwardRef} from 'react';
 import type {FieldMeta, Unstyled} from '../../_internal/utils/types.js';
 import {getFieldClasses} from '../../_internal/utils/getFieldClasses.js';
 
-const TextArea: FC<Unstyled<'textarea'> & {meta?: FieldMeta}> = ({
-  meta,
-  ...rest
-}) => <textarea {...rest} className={getFieldClasses(meta)} />;
+const TextArea = forwardRef<
+  HTMLTextAreaElement,
+  Unstyled<'textarea'> & {meta?: FieldMeta}
+>(({meta, ...rest}, ref) => (
+  <textarea {...rest} ref={ref} className={getFieldClasses(meta)} />
+));
 
 export default TextArea;
