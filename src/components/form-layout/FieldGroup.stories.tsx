@@ -15,12 +15,12 @@ export const FieldGroup: FC = () => (
 
 export const Validity: FC = () => (
   <div className="flex gap-2">
-    <Component label="Valid" meta={{touched: true, valid: true}}>
+    <Component label="Valid" meta={{touched: true}}>
       <TextInput />
     </Component>
     <Component
       label="Invalid"
-      meta={{touched: true, valid: false, errors: ['Field is invalid!']}}
+      meta={{touched: true, errors: ['Field is invalid!']}}
     >
       <TextInput />
     </Component>

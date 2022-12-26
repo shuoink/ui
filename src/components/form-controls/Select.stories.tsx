@@ -1,9 +1,11 @@
 import type {FC} from 'react';
-import Component from './Select.js';
+import SelectComponent, {
+  SelectGroup as SelectGroupComponent,
+} from './Select.js';
 
 const meta = {
   title: 'Base/Forms/Controls/Select',
-  component: Component,
+  component: SelectComponent,
 };
 
 const options = [
@@ -16,67 +18,78 @@ const options = [
   <option key="eos">eos</option>,
 ];
 
-export const Select: FC = () => <Component value="value" />;
+export const Select: FC = () => (
+  <SelectComponent value="value">{options}</SelectComponent>
+);
+
+export const SelectGroup: FC = () => (
+  <SelectGroupComponent label="Label" value="value">
+    {options}
+  </SelectGroupComponent>
+);
 
 export const Validity: FC = () => (
   <div className="flex gap-2">
-    <Component value="valid" meta={{touched: true, valid: true}}>
+    <SelectComponent value="valid" meta={{touched: true}}>
       {options}
-    </Component>
-    <Component value="invalid" meta={{touched: true, valid: false}}>
+    </SelectComponent>
+    <SelectComponent
+      value="invalid"
+      meta={{touched: true, errors: ['invalid']}}
+    >
       {options}
-    </Component>
+    </SelectComponent>
   </div>
 );
 
 export const Docked: FC = () => (
   <div className="flex gap-2">
-    <Component value="left" meta={{dock: {left: true}}}>
+    <SelectComponent value="left" meta={{dock: {left: true}}}>
       {options}
-    </Component>
-    <Component value="right" meta={{dock: {right: true}}}>
+    </SelectComponent>
+    <SelectComponent value="right" meta={{dock: {right: true}}}>
       {options}
-    </Component>
-    <Component value="top" meta={{dock: {top: true}}}>
+    </SelectComponent>
+    <SelectComponent value="top" meta={{dock: {top: true}}}>
       {options}
-    </Component>
-    <Component value="bottom" meta={{dock: {bottom: true}}}>
+    </SelectComponent>
+    <SelectComponent value="bottom" meta={{dock: {bottom: true}}}>
       {options}
-    </Component>
+    </SelectComponent>
 
-    <Component
+    <SelectComponent
       value="all"
       meta={{dock: {left: true, right: true, top: true, bottom: true}}}
     >
       {options}
-    </Component>
+    </SelectComponent>
 
-    <Component
+    <SelectComponent
       value="left, preserveBorder"
       meta={{dock: {left: ['borderRadius']}}}
     >
       {options}
-    </Component>
-    <Component
+    </SelectComponent>
+    <SelectComponent
       value="right, preserveBorder"
       meta={{dock: {right: ['borderRadius']}}}
     >
       {options}
-    </Component>
-    <Component
+    </SelectComponent>
+    <SelectComponent
       value="top, preserveBorder"
       meta={{dock: {top: ['borderRadius']}}}
     >
       {options}
-    </Component>
-    <Component
+    </SelectComponent>
+    <SelectComponent
       value="bottom, preserveBorder"
       meta={{dock: {bottom: ['borderRadius']}}}
     >
       {options}
-    </Component>
+    </SelectComponent>
 
-    <Component
+    <SelectComponent
       value="all, preserveBorder"
       meta={{
         dock: {
@@ -88,7 +101,7 @@ export const Docked: FC = () => (
       }}
     >
       {options}
-    </Component>
+    </SelectComponent>
   </div>
 );
 

@@ -1,50 +1,59 @@
 import type {FC} from 'react';
-import Component from './TextInput.js';
+import TextInputComponent, {
+  TextInputGroup as TextInputGroupComponent,
+} from './TextInput.js';
 
 const meta = {
   title: 'Base/Forms/Controls/Text Input',
-  component: Component,
+  component: TextInputComponent,
 };
 
-export const Input: FC = () => <Component value="value" />;
+export const Input: FC = () => <TextInputComponent value="value" />;
+
+export const InputGroup: FC = () => (
+  <TextInputGroupComponent label="Label" value="value" />
+);
 
 export const Validity: FC = () => (
   <div className="flex gap-2">
-    <Component value="valid" meta={{touched: true, valid: true}} />
-    <Component value="invalid" meta={{touched: true, valid: false}} />
+    <TextInputComponent value="valid" meta={{touched: true}} />
+    <TextInputComponent
+      value="invalid"
+      meta={{touched: true, errors: ['invalid']}}
+    />
   </div>
 );
 
 export const Docked: FC = () => (
   <div className="flex gap-2">
-    <Component value="left" meta={{dock: {left: true}}} />
-    <Component value="right" meta={{dock: {right: true}}} />
-    <Component value="top" meta={{dock: {top: true}}} />
-    <Component value="bottom" meta={{dock: {bottom: true}}} />
+    <TextInputComponent value="left" meta={{dock: {left: true}}} />
+    <TextInputComponent value="right" meta={{dock: {right: true}}} />
+    <TextInputComponent value="top" meta={{dock: {top: true}}} />
+    <TextInputComponent value="bottom" meta={{dock: {bottom: true}}} />
 
-    <Component
+    <TextInputComponent
       value="all"
       meta={{dock: {left: true, right: true, top: true, bottom: true}}}
     />
 
-    <Component
+    <TextInputComponent
       value="left, preserveBorder"
       meta={{dock: {left: ['borderRadius']}}}
     />
-    <Component
+    <TextInputComponent
       value="right, preserveBorder"
       meta={{dock: {right: ['borderRadius']}}}
     />
-    <Component
+    <TextInputComponent
       value="top, preserveBorder"
       meta={{dock: {top: ['borderRadius']}}}
     />
-    <Component
+    <TextInputComponent
       value="bottom, preserveBorder"
       meta={{dock: {bottom: ['borderRadius']}}}
     />
 
-    <Component
+    <TextInputComponent
       value="all, preserveBorder"
       meta={{
         dock: {

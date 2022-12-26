@@ -1,9 +1,11 @@
 import type {FC} from 'react';
-import Component from './RadioSelect.js';
+import RadioSelectComponent, {
+  RadioSelectGroup as RadioSelectGroupComponent,
+} from './RadioSelect.js';
 
 const meta = {
   title: 'Base/Forms/Controls/RadioSelect',
-  component: Component,
+  component: RadioSelectComponent,
 };
 
 const options = [
@@ -16,17 +18,26 @@ const options = [
 ];
 
 export const RadioSelect: FC = () => (
-  <Component name="test">{options}</Component>
+  <RadioSelectComponent name="test">{options}</RadioSelectComponent>
+);
+
+export const RadioSelectGroup: FC = () => (
+  <RadioSelectGroupComponent label="Label" name="test">
+    {options}
+  </RadioSelectGroupComponent>
 );
 
 export const Validity: FC = () => (
   <div className="flex gap-2">
-    <Component name="test" meta={{touched: true, valid: true}}>
+    <RadioSelectComponent name="test" meta={{touched: true}}>
       {options}
-    </Component>
-    <Component name="test2" meta={{touched: true, valid: false}}>
+    </RadioSelectComponent>
+    <RadioSelectComponent
+      name="test2"
+      meta={{touched: true, errors: ['invalid']}}
+    >
       {options}
-    </Component>
+    </RadioSelectComponent>
   </div>
 );
 

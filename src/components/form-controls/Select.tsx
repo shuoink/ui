@@ -2,6 +2,7 @@ import {forwardRef} from 'react';
 import {MdExpandMore} from 'react-icons/md/index.js';
 import type {FieldMeta, Unstyled} from '../../_internal/utils/types.js';
 import {getFieldClasses} from '../../_internal/utils/getFieldClasses.js';
+import withFieldGroup from '../../_internal/decorators/withFieldGroup.js';
 
 const Select = forwardRef<
   HTMLSelectElement,
@@ -19,5 +20,7 @@ const Select = forwardRef<
     </div>
   </div>
 ));
+
+export const SelectGroup = withFieldGroup(Select);
 
 export default Select;

@@ -2,11 +2,13 @@ import type {ChangeEvent, FC} from 'react';
 import {useState} from 'react';
 import {noop} from '../../_internal/utils/noop.js';
 import Heading from '../typography/Heading.js';
-import SwitchControl from './Switch.js';
+import SwitchComponent, {
+  SwitchGroup as SwitchGroupComponent,
+} from './Switch.js';
 
 const meta = {
   title: 'Base/Forms/Controls/Switch',
-  component: SwitchControl,
+  component: SwitchComponent,
 };
 
 export const Switch: FC = () => {
@@ -32,76 +34,80 @@ export const Switch: FC = () => {
           <tr>
             <th scope="row">On</th>
             <td>
-              <SwitchControl checked onChange={noop} />
+              <SwitchComponent checked onChange={noop} />
             </td>
             <td>
-              <SwitchControl readOnly checked onChange={noop} />
+              <SwitchComponent readOnly checked onChange={noop} />
             </td>
             <td>
-              <SwitchControl disabled checked onChange={noop} />
+              <SwitchComponent disabled checked onChange={noop} />
             </td>
             <td>
-              <SwitchControl valid checked onChange={noop} />
+              <SwitchComponent valid checked onChange={noop} />
             </td>
             <td>
-              <SwitchControl valid={false} checked onChange={noop} />
+              <SwitchComponent valid={false} checked onChange={noop} />
             </td>
             <td>
-              <SwitchControl vertical checked onChange={noop} />
+              <SwitchComponent vertical checked onChange={noop} />
             </td>
           </tr>
           <tr>
             <th scope="row">Off</th>
             <td>
-              <SwitchControl checked={false} onChange={noop} />
+              <SwitchComponent checked={false} onChange={noop} />
             </td>
             <td>
-              <SwitchControl readOnly checked={false} onChange={noop} />
+              <SwitchComponent readOnly checked={false} onChange={noop} />
             </td>
             <td>
-              <SwitchControl disabled checked={false} onChange={noop} />
+              <SwitchComponent disabled checked={false} onChange={noop} />
             </td>
             <td>
-              <SwitchControl valid checked={false} onChange={noop} />
+              <SwitchComponent valid checked={false} onChange={noop} />
             </td>
             <td>
-              <SwitchControl valid={false} checked={false} onChange={noop} />
+              <SwitchComponent valid={false} checked={false} onChange={noop} />
             </td>
             <td>
-              <SwitchControl vertical checked={false} onChange={noop} />
+              <SwitchComponent vertical checked={false} onChange={noop} />
             </td>
           </tr>
           <tr>
             <th scope="row">Interactive</th>
             <td>
-              <SwitchControl checked={checked} onChange={handleChange} />
+              <SwitchComponent checked={checked} onChange={handleChange} />
             </td>
             <td>
-              <SwitchControl
+              <SwitchComponent
                 readOnly
                 checked={checked}
                 onChange={handleChange}
               />
             </td>
             <td>
-              <SwitchControl
+              <SwitchComponent
                 disabled
                 checked={checked}
                 onChange={handleChange}
               />
             </td>
             <td>
-              <SwitchControl valid checked={checked} onChange={handleChange} />
+              <SwitchComponent
+                valid
+                checked={checked}
+                onChange={handleChange}
+              />
             </td>
             <td>
-              <SwitchControl
+              <SwitchComponent
                 valid={false}
                 checked={checked}
                 onChange={handleChange}
               />
             </td>
             <td>
-              <SwitchControl
+              <SwitchComponent
                 vertical
                 checked={checked}
                 onChange={handleChange}
@@ -113,26 +119,27 @@ export const Switch: FC = () => {
       <Heading>Inline</Heading>
       <p>
         <label>
-          On: <SwitchControl inline checked onChange={noop} />
+          On: <SwitchComponent inline checked onChange={noop} />
         </label>{' '}
         <label>
-          Off: <SwitchControl inline checked={false} onChange={noop} />
+          Off: <SwitchComponent inline checked={false} onChange={noop} />
         </label>{' '}
         <label>
           Interactive:{' '}
-          <SwitchControl inline checked={checked} onChange={handleChange} />
+          <SwitchComponent inline checked={checked} onChange={handleChange} />
         </label>
       </p>
       <p>
         <label>
-          On: <SwitchControl inline vertical checked onChange={noop} />
+          On: <SwitchComponent inline vertical checked onChange={noop} />
         </label>{' '}
         <label>
-          Off: <SwitchControl inline vertical checked={false} onChange={noop} />
+          Off:{' '}
+          <SwitchComponent inline vertical checked={false} onChange={noop} />
         </label>{' '}
         <label>
           Interactive:{' '}
-          <SwitchControl
+          <SwitchComponent
             inline
             vertical
             checked={checked}
@@ -143,5 +150,9 @@ export const Switch: FC = () => {
     </div>
   );
 };
+
+export const SwitchGroup: FC = () => (
+  <SwitchGroupComponent label="Label" checked onChange={noop} />
+);
 
 export default meta;

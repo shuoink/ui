@@ -4,17 +4,18 @@ import {defaultImport} from 'default-import';
 import {getDockClasses} from '../../_internal/utils/dock.js';
 import {getValidityClasses} from '../../_internal/utils/getValidityClasses.js';
 import type {FieldMeta} from '../../_internal/utils/types.js';
+import isEmptyOrNil from '../../_internal/utils/isEmptyOrNil.js';
 
 const clsx = defaultImport(_clsx);
 
 const FieldFeedback: FC<FieldMeta> = ({
   displayName,
   touched,
-  valid,
   errors,
   dock = {},
 }) => {
-  if (!touched || valid) {
+  const isValid = isEmptyOrNil(errors);
+  if (!touched || !isValid) {
     return null;
   }
   const dockClasses: string = getDockClasses(dock);

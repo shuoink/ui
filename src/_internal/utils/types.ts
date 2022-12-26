@@ -13,7 +13,6 @@ export type Unstyled<ELEMENT_TYPE extends keyof JSX.IntrinsicElements> = Omit<
 
 export type FieldMeta = {
   touched?: boolean;
-  valid?: boolean | null;
   dock?: DockConfig;
   block?: boolean;
   isRadio?: boolean;

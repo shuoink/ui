@@ -1,50 +1,59 @@
 import type {FC} from 'react';
-import Component from './TextArea.js';
+import TextAreaComponent, {
+  TextAreaGroup as TextAreaGroupComponent,
+} from './TextArea.js';
 
 const meta = {
   title: 'Base/Forms/Controls/TextArea',
-  component: Component,
+  component: TextAreaComponent,
 };
 
-export const TextArea: FC = () => <Component value="value" />;
+export const TextArea: FC = () => <TextAreaComponent value="value" />;
+
+export const TextAreaGroup: FC = () => (
+  <TextAreaGroupComponent label="Label" value="value" />
+);
 
 export const Validity: FC = () => (
   <div className="flex gap-2">
-    <Component value="valid" meta={{touched: true, valid: true}} />
-    <Component value="invalid" meta={{touched: true, valid: false}} />
+    <TextAreaComponent value="valid" meta={{touched: true}} />
+    <TextAreaComponent
+      value="invalid"
+      meta={{touched: true, errors: ['invalid']}}
+    />
   </div>
 );
 
 export const Docked: FC = () => (
   <div className="flex gap-2">
-    <Component value="left" meta={{dock: {left: true}}} />
-    <Component value="right" meta={{dock: {right: true}}} />
-    <Component value="top" meta={{dock: {top: true}}} />
-    <Component value="bottom" meta={{dock: {bottom: true}}} />
+    <TextAreaComponent value="left" meta={{dock: {left: true}}} />
+    <TextAreaComponent value="right" meta={{dock: {right: true}}} />
+    <TextAreaComponent value="top" meta={{dock: {top: true}}} />
+    <TextAreaComponent value="bottom" meta={{dock: {bottom: true}}} />
 
-    <Component
+    <TextAreaComponent
       value="all"
       meta={{dock: {left: true, right: true, top: true, bottom: true}}}
     />
 
-    <Component
+    <TextAreaComponent
       value="left, preserveBorder"
       meta={{dock: {left: ['borderRadius']}}}
     />
-    <Component
+    <TextAreaComponent
       value="right, preserveBorder"
       meta={{dock: {right: ['borderRadius']}}}
     />
-    <Component
+    <TextAreaComponent
       value="top, preserveBorder"
       meta={{dock: {top: ['borderRadius']}}}
     />
-    <Component
+    <TextAreaComponent
       value="bottom, preserveBorder"
       meta={{dock: {bottom: ['borderRadius']}}}
     />
 
-    <Component
+    <TextAreaComponent
       value="all, preserveBorder"
       meta={{
         dock: {

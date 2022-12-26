@@ -1,26 +1,42 @@
 import type {FC} from 'react';
-import Component from './Checkbox.js';
+import CheckboxComponent, {
+  CheckboxGroup as CheckboxGroupComponent,
+} from './Checkbox.js';
 
 const meta = {
   title: 'Base/Forms/Controls/Checkbox',
-  component: Component,
+  component: CheckboxComponent,
 };
 
 export const Checkbox: FC = () => (
   <div className="flex gap-2">
-    <Component value="value" />
-    <Component value="value" checked />
+    <CheckboxComponent value="value" />
+    <CheckboxComponent value="value" checked />
+  </div>
+);
+
+export const CheckboxGroup: FC = () => (
+  <div className="flex flex-col gap-2">
+    <CheckboxGroupComponent label="Label" value="value" />
+    <CheckboxGroupComponent label="Label" value="value" checked />
   </div>
 );
 
 export const Validity: FC = () => (
   <>
     <div className="inline-grid grid-cols-2 gap-2">
-      <Component value="valid" meta={{touched: true, valid: true}} />
-      <Component value="valid" checked meta={{touched: true, valid: true}} />
+      <CheckboxComponent value="valid" meta={{touched: true}} />
+      <CheckboxComponent value="valid" checked meta={{touched: true}} />
 
-      <Component value="valid" meta={{touched: true, valid: false}} />
-      <Component value="valid" checked meta={{touched: true, valid: false}} />
+      <CheckboxComponent
+        value="valid"
+        meta={{touched: true, errors: ['invalid']}}
+      />
+      <CheckboxComponent
+        value="valid"
+        checked
+        meta={{touched: true, errors: ['invalid']}}
+      />
     </div>
   </>
 );

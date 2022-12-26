@@ -1,5 +1,6 @@
 import _clsx from 'clsx';
 import {defaultImport} from 'default-import';
+import isEmptyOrNil from './isEmptyOrNil.js';
 import type {FieldMeta} from './types.js';
 import {getDockClasses} from './dock.js';
 import {getValidityClasses} from './getValidityClasses.js';
@@ -8,7 +9,7 @@ const clsx = defaultImport(_clsx);
 
 export const getFieldClasses = ({
   touched = false,
-  valid = null,
+  errors,
   dock = {},
   block = true,
   isRadio = false,
@@ -22,7 +23,7 @@ export const getFieldClasses = ({
     'p-2',
     getDockClasses(dock),
     getValidityClasses(
-      touched ? valid : null,
+      touched ? isEmptyOrNil(errors) : null,
       'bg-white border-gray-500 text-gray-900',
     ),
     {

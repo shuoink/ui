@@ -1,36 +1,50 @@
 import type {FC} from 'react';
-import Component from './Slider.js';
+import SliderComponent, {
+  SliderGroup as SliderGroupComponent,
+} from './Slider.js';
 
 const meta = {
   title: 'Base/Forms/Controls/Slider',
-  component: Component,
+  component: SliderComponent,
 };
 
 const options = (
   <>
-    <option value="1">1</option>
-    <option value="2">2</option>
-    <option value="3">3</option>
-    <option value="4">4</option>
-    <option value="5">5</option>
-    <option value="6">6</option>
-    <option value="7">7</option>
-    <option value="8">8</option>
-    <option value="9">9</option>
-    <option value="10">10</option>
+    <option value="1">One</option>
+    <option value="2">Two</option>
+    <option value="3">Three</option>
+    <option value="4">Four</option>
+    <option value="5">Five</option>
+    <option value="6">Six</option>
+    <option value="7">Seven</option>
+    <option value="8">Eight</option>
+    <option value="9">Nine</option>
+    <option value="10">Ten</option>
   </>
 );
 
 export const Slider: FC = () => (
-  <Component min={1} max={10} defaultValue={5}>
+  <SliderComponent min={1} max={10} defaultValue={5}>
     {options}
-  </Component>
+  </SliderComponent>
+);
+
+export const SliderGroup: FC = () => (
+  <SliderGroupComponent label="Label" min={1} max={10} defaultValue={5}>
+    {options}
+  </SliderGroupComponent>
+);
+
+export const Ticks: FC = () => (
+  <SliderComponent min={1} max={10} defaultValue={5} showTicks>
+    {options}
+  </SliderComponent>
 );
 
 export const Validity: FC = () => (
   <div className="flex gap-2">
-    <Component value={5} meta={{touched: true, valid: true}} />
-    <Component value={5} meta={{touched: true, valid: false}} />
+    <SliderComponent value={5} meta={{touched: true}} />
+    <SliderComponent value={5} meta={{touched: true, errors: ['invalid']}} />
   </div>
 );
 

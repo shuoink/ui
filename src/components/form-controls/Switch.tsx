@@ -1,6 +1,7 @@
 import _clsx from 'clsx';
 import {defaultImport} from 'default-import';
 import {forwardRef} from 'react';
+import withFieldGroup from '../../_internal/decorators/withFieldGroup.js';
 
 const clsx = defaultImport(_clsx);
 
@@ -67,5 +68,7 @@ const Switch = forwardRef<HTMLInputElement, Props>(
 );
 
 Switch.displayName = 'Switch';
+
+export const SwitchGroup = withFieldGroup(Switch, {row: true});
 
 export default Switch;

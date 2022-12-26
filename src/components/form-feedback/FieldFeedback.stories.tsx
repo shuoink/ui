@@ -11,7 +11,7 @@ export const Invalid: FC = () => (
   <>
     <TextInput
       value="invalid value"
-      meta={{dock: {bottom: true}, touched: true, valid: false}}
+      meta={{dock: {bottom: true}, touched: true, errors: ['invalid']}}
     />
     <FieldFeedbackComponent
       dock={{top: ['borderRadius']}}
