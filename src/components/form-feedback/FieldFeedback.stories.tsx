@@ -17,7 +17,7 @@ export const Invalid: FC = () => (
       dock={{top: ['borderRadius']}}
       displayName="Name"
       touched
-      errors={['Name is invalid!']}
+      errors={['Name is invalid!', 'Name is bad!']}
     />
   </>
 );

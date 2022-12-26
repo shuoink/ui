@@ -28,7 +28,14 @@ const FieldFeedback: FC<FieldMeta> = ({
         validityClasses,
       )}
     >
-      {errors?.map(error => error.replace(/\[name\]/u, displayName ?? 'Field'))}
+      <ul>
+        {errors?.map((error, index) => (
+          // eslint-disable-next-line react/no-array-index-key -- meh
+          <li key={index}>
+            {error.replace(/\[name\]/u, displayName ?? 'Field')}
+          </li>
+        ))}
+      </ul>
     </div>
   );
 };
