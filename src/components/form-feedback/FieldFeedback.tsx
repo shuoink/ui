@@ -15,7 +15,7 @@ const FieldFeedback: FC<FieldMeta> = ({
   dock = {},
 }) => {
   const isValid = isEmptyOrNil(errors);
-  if (!touched || !isValid) {
+  if (!touched || isValid) {
     return null;
   }
   const dockClasses: string = getDockClasses(dock);
